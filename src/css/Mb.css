@@ -1,0 +1,1973 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* 登出按鈕 */
+.M-logOutbtn {
+  width: 2rem;
+  height: 2rem;
+  background: teal;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+/* 登入卡 */
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.M-loginWrapper {
+  width: 23.4rem;
+  height: 41.7rem;
+  /* border: 1px solid black; */
+  /* margin: 0; */
+  /* margin: 10px 10px; */
+  position: relative;
+  background: #79cee2;
+  padding-top: 0.1rem;
+  overflow: hidden;
+}
+
+.M-logCard {
+  width: 21.1rem;
+  height: 39.5rem;
+  background: teal;
+  background: white;
+  margin: 1.03rem auto;
+  transition: 1s;
+  text-align: center;
+  padding-top: 1rem;
+  /* display: none; */
+}
+.M-logCard.active {
+  display: none;
+}
+
+.M-regCard {
+  width: 21.1rem;
+  height: 39.5rem;
+  background: red;
+  background: white;
+  margin: 1rem auto;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.M-moveBrick1 {
+  width: 15rem;
+  height: 1.2rem;
+  /* border: 1px solid green; */
+  background: white;
+  position: absolute;
+  transition: 0.75s;
+  left: 1.15rem;
+  top: 0;
+}
+.M-moveBrick2 {
+  width: 15rem;
+  height: 1.2rem;
+  /* border: 1px solid green; */
+  position: absolute;
+  transition: 0.75s;
+  background: white;
+  left: 7.25rem;
+  bottom: 0;
+}
+.M-moveBrick3 {
+  width: 1.2rem;
+  height: 18rem;
+  background: white;
+  transition: 0.75s;
+  /* border: 1px solid blueviolet; */
+  position: absolute;
+  top: 16rem;
+}
+.M-moveBrick4 {
+  width: 1.2rem;
+  height: 18rem;
+  background: white;
+  transition: 0.75s;
+  /* border: 1px solid blueviolet; */
+  position: absolute;
+  left: 22.25rem;
+  top: 8rem;
+}
+.M-FgpwdCard {
+  width: 18rem;
+  height: 28rem;
+  border: 1px solid #79cee2;
+  background: white;
+  z-index: 1;
+  padding: 0 1rem;
+  text-align: center;
+  position: absolute;
+  top: 12rem;
+  left: 2.5rem;
+}
+.M-FgpwdCardcBtn {
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  line-height: 2.2rem;
+  /* background: yellow; */
+  color: #f9a451;
+  margin-left: 13rem;
+  margin-top: 0.2rem;
+  transition: 0.5s;
+  /* border: 1px dotted black; */
+}
+.M-FgpwdCardcBtn:hover {
+  color: #ec8824;
+}
+.M-FgpwdCardpic {
+  width: 10rem;
+  height: 15rem;
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+  /* border: 1px solid teal; */
+}
+.M-FgpwdCardpic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.M-FgpwdCardinput {
+  border: 1px solid #79cee2;
+}
+.M-sendMail {
+  margin-top: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  color: #ec8824;
+  font-weight: 400;
+  border: 1px solid #ec8824;
+}
+.M-sendMail:hover {
+  background: #79cee2;
+  color: white;
+}
+
+.M-loginWrapper.active {
+  background: #f9a451;
+}
+.M-moveBrick1.active {
+  transform: translateX(6.05rem);
+}
+.M-moveBrick2.active {
+  transform: translateX(-6.05rem);
+}
+.M-moveBrick3.active {
+  transform: translateY(-8rem);
+}
+.M-moveBrick4.active {
+  transform: translateY(8rem);
+}
+.M-fakeLogo {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  /* padding: 10px; */
+  /* border: 1px black dotted; */
+}
+.M-majortopic {
+  /* color: #79cee2; */
+}
+.M-majortopic.active {
+  color: green;
+}
+.M-apiLog {
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 6rem;
+  display: flex;
+}
+.M-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.1rem;
+  border: 1px dotted black;
+}
+
+.M-logForm {
+  position: relative;
+}
+.M-logForm h4 {
+  font-size: 1.2rem;
+  line-height: 3rem;
+  position: absolute;
+  left: 0.5rem;
+}
+
+.M-loginInput {
+  /* background: red; */
+  /* outline: none; */
+  border: none;
+  border-bottom: 0.5px solid black;
+  /* caret-color: #79cee2; */
+  margin-top: 30px;
+}
+.M-loginInput:focus {
+  outline: none;
+  /* border-color: #ff6; */
+  /* box-shadow: 1px 2px 1px #996; */
+}
+.M-loginInput.active {
+  border: 1px solid red;
+}
+.M-inputwrapper {
+  position: relative;
+}
+.M-lginputalert {
+  margin: 0;
+  position: absolute;
+  font-size: 0.8rem;
+  color: red;
+  top: 0;
+  right: 3.5rem;
+}
+.M-lginputalert.active {
+  color: green;
+}
+.M-forgetpwd {
+  margin-top: 1rem;
+  padding: 5px 5px;
+  margin-left: 9rem;
+  border: 1px solid #f9a451;
+  color: #f9a451;
+}
+.M-rginputalertEmail {
+  margin: 0;
+  position: absolute;
+  font-size: 0.8rem;
+  color: red;
+  top: 0;
+  right: 3.5rem;
+}
+.M-rginputalertEmail.active {
+  color: green;
+}
+.M-rginputalertpwd {
+  margin: 0;
+  position: absolute;
+  font-size: 0.8rem;
+  color: red;
+  top: 7rem;
+  right: 3.5rem;
+}
+.M-rginputalertpwd.active {
+  color: green;
+}
+
+.M-loginBtn {
+  /* margin: 0 auto;
+  margin-top: 40px; */
+  padding: 6px 8px;
+  border: 1px solid #79cee2;
+  color: #79cee2;
+  font-size: 1.875rem;
+  position: absolute;
+  top: 15rem;
+  left: 8.5rem;
+}
+
+.M-loginSwitch {
+  width: 5rem;
+  height: 5rem;
+  /* border: 1px dotted black; */
+  position: absolute;
+  top: 20rem;
+  left: 2rem;
+  background: #f9a451;
+}
+
+.M-regBtn {
+  /* margin: 0 auto;
+  margin-top: 40px; */
+  padding: 6px 8px;
+  border: 1px solid #79cee2;
+  color: #79cee2;
+  font-size: 1.875rem;
+  position: absolute;
+  top: 15rem;
+  left: 8.5rem;
+}
+
+.M-regSwitch {
+  width: 5rem;
+  height: 5rem;
+  /* border: 1px dotted black; */
+  position: absolute;
+  top: 20rem;
+  left: 2rem;
+  background: #79cee2;
+}
+
+/* -------------------會員中心左側//大頭貼//轉換鈕//關注商品--------------- */
+.M-indexLeft {
+  width: 23.4rem;
+  position: relative;
+  /* border: 1px solid black; */
+}
+
+.M-avatarWrapper {
+  width: 23.2rem;
+  /* height: 50rem; */
+  height: 12.5rem;
+  /* background: lightblue; */
+  position: relative;
+  transition: 2s;
+  overflow: hidden;
+}
+/* 以調整成功能 */
+/* .active  */
+/* .M-avatarWrapper { */
+/* height: 52rem; */
+/* } */
+
+.M-avatarTop {
+  border: 1px solid #79cee2;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+.M-avatarPhoto {
+  width: 8rem;
+  height: 8rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  border: 0.5px solid #adb6bd;
+  overflow: hidden;
+  /* box-shadow: 2px 3px 0px black; */
+  /* z-index: 1; */
+  border-radius: 50%;
+}
+
+.M-avatarPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.M-avatarDes {
+  width: 14rem;
+  height: 8rem;
+  text-align: left;
+  margin-top: 2rem;
+  margin-left: 15px;
+  /* border: 1px solid black; */
+}
+.M-avatarTop h3 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.M-avatarDes h6 {
+  color: grey;
+}
+
+.M-mbDeschagebtn {
+  width: 8rem;
+  height: 2rem;
+  /* font-size: 1.5rem; */
+  font-weight: 700;
+  border: 1px solid #79cee2;
+  color: #79cee2;
+  text-align: center;
+  background: white;
+  position: absolute;
+  font-weight: 600;
+  left: 4.5rem;
+  top: 10rem;
+  transition: 0.75s;
+  /* margin-left: 5rem; */
+}
+.M-mbDeschagebtn:focus {
+  outline: none;
+}
+.M-mbDeschagebtn:hover {
+  color: white;
+  background: #79cee2;
+}
+
+.M-avatarChange {
+  width: 3rem;
+  height: 3rem;
+  /* border: 1px dotted green; */
+  position: absolute;
+  font-size: 3rem;
+  line-height: 1rem;
+  color: #f9a451;
+  text-align: center;
+  top: 7rem;
+  cursor: pointer;
+  animation: Rotate 6s infinite linear;
+}
+/* 齒輪轉動 */
+@keyframes Rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.M-comLink {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  position: absolute;
+  left: 14rem;
+  top: 9rem;
+  color: #79cee2;
+  text-align: center;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.M-comLink:hover {
+  color: #4691f6;
+}
+.M-MajorLink {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  position: absolute;
+  left: 17rem;
+  top: 9.1rem;
+  color: #79cee2;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.M-MajorLink:hover {
+  color: #4691f6;
+}
+
+/* .M-avatarDes > h6 {
+width: 15rem;
+height: 8rem;
+text-align: center;
+margin-top: 2.5rem;
+border: 1px solid black;
+} */
+.M-avatardwn {
+  margin-top: 2rem;
+  width: 23.2rem;
+  height: 30rem;
+  /* border: 1px solid red; */
+}
+
+.M-mbdesForm {
+  text-align: center;
+  padding-bottom: 0.4rem;
+  box-shadow: 0px 3px 6px #707070;
+}
+.M-editLeavebtn {
+  display: inline-block;
+  margin-left: 17rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+  color: #f9a451;
+}
+.M-editLeavebtn:hover {
+  color: #df8d3c;
+}
+.M-mbdesFormtop {
+  display: flex;
+}
+
+.M-mbdesformLab {
+  text-align: right;
+  width: 8rem;
+}
+
+.M-mbdesformLab h6 {
+  /* margin: 15px; */
+  font-size: 1.2rem;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+
+.M-mbdesformIpt {
+  width: 10rem;
+  overflow: hidden;
+
+  /* height: 10rem; */
+}
+.M-mbdesformIpt h6 {
+  display: inline-block;
+  height: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.M-mbdesformIpt input {
+  margin-top: 11.5px;
+  border: none;
+  border-bottom: 0.5px solid black;
+  /* display: block; */
+}
+.M-mbdesformIpt select {
+  margin-top: 8px;
+}
+
+.M-mbdesFormdwn {
+  text-align: center;
+}
+
+.M-mbdesFormdwn h6 {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-left: 2.3rem;
+}
+.M-mbdesFormdwn textarea {
+  border: none;
+  border: 1px dotted black;
+}
+
+.M-mbdesSub {
+  margin-top: 1rem;
+  padding: 5px 5px;
+  border: 1px solid #79cee2;
+  color: #79cee2;
+  font-size: 1.875rem;
+}
+
+/* 會員頁左邊選鈕 */
+.M-subbtnGroup {
+  margin: 10px 0;
+  width: 23.2rem;
+  height: 7.8rem;
+  /* background: pink; */
+  display: flex;
+}
+
+.M-subbtnGroup button {
+  width: 7.8125rem;
+  height: 7.8125rem;
+  line-height: 6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 1px solid #79cee2;
+  color: #79cee2;
+  text-align: center;
+  background: white;
+  padding: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.M-subbtnGroup button:focus {
+  outline: none;
+  color: #f9a451;
+}
+.M-subbtnGroup button:hover {
+  transform: scale(0.8);
+}
+
+/* 關注商品列表 */
+.M-LikeproductWrapper {
+  width: 23.2rem;
+  border: 1px solid #79cee2;
+}
+.M-LikeproductWrapper h3 {
+  margin-top: 1rem;
+  margin-left: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.M-azenproductListWindow {
+  width: 16.3rem;
+  height: 22.4rem;
+  margin: 0 auto;
+  /* background: blueviolet; */
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+  /* border: 0.5px solid #707070; */
+  box-shadow: 0px 3px 6px #707070;
+}
+
+.M-azenproductList {
+  width: 16rem;
+  height: 30rem;
+  /* border: 1px solid red; */
+  position: absolute;
+  transition: 0.8s;
+  /* bottom: 16.2rem; */
+  /* top: -23.2rem; */
+  top: 0rem;
+}
+
+.M-markpdWrapper {
+  width: 16.5rem;
+  height: 23rem;
+  /* border-radius: 0 5%; */
+  /* border: 1px solid black; */
+  overflow: hidden;
+  /* box-shadow: 0px 6px 2 black; */
+  transition: 0.75s;
+  text-align: center;
+  /* border: 0.5px solid blue; */
+  /* margin:  auto 1rem; */
+  /* margin-bottom: 2rem; */
+}
+
+.M-markpdWrapper.active {
+  transform: translateY(-10px);
+}
+
+.M-markpdImg {
+  width: 100%;
+  height: 166px;
+}
+
+.M-markpdImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: cell;
+  transition: 0.75s;
+}
+
+.M-markpdImg img:hover {
+  transform: scale(0.95);
+}
+
+.M-markpdBody {
+  width: 90%;
+  height: 0;
+  text-align: center;
+  margin: 0 auto 10px;
+  /* transition: .75s; */
+  transition: all 0.75s cubic-bezier(0.23, 1, 0.58, 1);
+  overflow: hidden;
+}
+
+.M-markpdBody.active {
+  height: 51%;
+  border: 2px solid #707070;
+  border-top: 0;
+}
+
+.M-markpdBody h5 {
+  font-weight: 600;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.M-markpdDes {
+  position: relative;
+  text-align: right;
+}
+
+.M-markpdDes p {
+  margin: 5px 5px;
+  font-size: 0.8rem;
+  line-height: 25px;
+  text-align: left;
+  /* 指定保留行數*/
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.M-markpdSub {
+  color: #f9a451;
+}
+
+.M-markpdTrans {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0.2rem;
+  text-align: center;
+  /* background: yellow; */
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  color: #707070;
+  text-decoration: none;
+  float: right;
+  filter: opacity(50%);
+  /* position: absolute;
+  right: 0; */
+}
+
+.M-markpdTrans:hover {
+  filter: opacity(100%);
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.M-markpdTrans img {
+  width: 100%;
+  height: 100%;
+  color: #707070;
+  object-fit: cover;
+}
+
+.M-markpdOuttitle {
+  display: inline-block;
+  margin: 0;
+  transition: 0.75s;
+  line-height: 150px;
+  /* white-space: normal; */
+}
+
+.M-markpdOuttitle.active {
+  opacity: 0;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+/* ---McollectgameDetail---會員收藏遊戲詳細小卡元件------ */
+.collectcarddetailWrapper {
+  width: 46.8rem;
+  height: 19.75rem;
+  /* border: 1px solid black; */
+  background: white;
+  display: flex;
+  /* //為了在遊戲庫調整 */
+  position: fixed;
+  top: 15rem;
+  left: 48rem;
+  z-index: 1;
+  /* 暫時測試關掉 */
+  /* display: none; */
+  box-shadow: 0px 3px 6px #707070;
+}
+
+.collectcarddetailLeft {
+  /* width: 22rem;
+  height: 17rem;
+  border: 1px solid green; */
+}
+
+.collectcarddetailImg {
+  margin-top: 1.5rem;
+  width: 22rem;
+  height: 14rem;
+  /* border: 1px solid indianred; */
+}
+
+.collectcarddetailRight {
+  padding: 0.3rem;
+  margin-left: 0.2rem;
+  width: 24.5rem;
+  height: 19.5rem;
+  /* border: 1px solid indianred; */
+  position: relative;
+}
+
+.collectcarddetailRight h4 {
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  font-weight: 900;
+}
+
+.collectcarddetailRight h6 {
+  color: #adb6bd;
+  font-size: 1rem;
+}
+.collectcarddetailRight p {
+  /* color: #adb6bd; */
+  font-size: 0.85rem;
+}
+
+.collectcarddetailCbtn {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 2rem;
+  /* background: khaki; */
+  color: #f9a451;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.collectcarddetailCbtn:hover {
+  color: #db8d3f;
+}
+
+.M-collectcarddetailStart {
+  border: 1px solid #79cee2;
+  color: #79cee2;
+  padding: 8px 6px;
+  font-size: 1.2rem;
+  /* margin-left: rem; */
+  margin-top: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.M-collectcarddetailStart:hover {
+  color: white;
+  background: #79cee2;
+}
+
+/* ---------------------加好友小卡----------------- */
+.M-addfriendCardWrapper {
+  width: 23rem;
+  height: 13rem;
+  /* border: 1px solid black; */
+  /* box-shadow: 0px 3px 6px #707070; */
+  position: relative;
+}
+
+.M-addfriendCardWrapper svg {
+  -webkit-filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.7));
+  fill: #fff;
+}
+
+/* 背景圓 */
+.M-addfriendcardCricle {
+  width: 19rem;
+  height: 13rem;
+  margin-left: 4rem;
+  position: relative;
+}
+
+.M-addfriendPhoto {
+  width: 7.5rem;
+  height: 7.5rem;
+  border: 1px solid black;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.7rem;
+  left: 0.2rem;
+}
+
+.M-addfriendBricktop {
+  width: 8rem;
+  height: 2rem;
+  /* border: 1px solid black; */
+  position: absolute;
+  background: #79cee2;
+  top: 0;
+}
+
+.M-addfriendBrickdwn {
+  width: 8rem;
+  height: 2rem;
+  /* border: 1px solid black; */
+  position: absolute;
+  background: #79cee2;
+  bottom: 0.1rem;
+  right: 0.25rem;
+}
+
+/* ------------確認好友卡--------------- */
+.M-cffriendBricktop {
+  width: 8rem;
+  height: 2rem;
+  /* border: 1px solid black; */
+  position: absolute;
+  background: #f9a451;
+  top: 0;
+}
+
+.M-cffriendBrickdwn {
+  width: 8rem;
+  height: 2rem;
+  /* border: 1px solid black; */
+  position: absolute;
+  background: #f9a451;
+  bottom: 0;
+  right: 0.25rem;
+}
+
+.M-addfriendDes {
+  width: 15.5rem;
+  margin-left: 3rem;
+  height: 13rem;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 0;
+  display: flex;
+}
+
+.M-addfrienddesLeft {
+  width: 15.8rem;
+  height: 12.8rem;
+  position: relative;
+  /* border: 1px solid black; */
+}
+
+.M-addfrienddesLeft h5 {
+  line-height: 5.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.M-addfrienddesLeft p {
+  margin-left: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.M-addfrienddesLeft h6 {
+  font-weight: 900;
+  margin-left: 0.5rem;
+}
+
+/* 加入連結 */
+
+.M-addfrienddesLeftbtn {
+  width: 6rem;
+  padding: 6px 8px;
+  font-weight: 900;
+  text-align: center;
+  color: #79cee2;
+  border: 1px solid #79cee2;
+  position: absolute;
+  bottom: 2rem;
+  right: 0.2rem;
+}
+.M-addfrienddesLeftbtn:hover {
+  background: #79cee2;
+  color: white;
+  border: 1px solid #79cee2;
+}
+
+/* -----------確認好友卡------------ */
+.M-cffrienddesLeftbtn {
+  width: 6rem;
+  padding: 6px 8px;
+  font-weight: 900;
+  text-align: center;
+  color: #f9a451;
+  border: 1px solid #f9a451;
+  position: absolute;
+  bottom: 2rem;
+  right: 0.2rem;
+}
+.M-cffrienddesLeftbtn:hover {
+  background: #f9a451;
+  color: white;
+  border: 1px solid #79cee2;
+}
+
+/* .M-addfrienddesRight {
+  margin-left: 0.1rem;
+  width: 4rem;
+  height: 12.8rem;
+  border: 1px solid red;
+} */
+/* //會被SVG蓋過 */
+.M-addfriendcardcbtn {
+  width: 3rem;
+  height: 3rem;
+  /* border: 1px dotted black;
+  background: #f9a451; */
+  /* color: #db8d3f; */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* 實際使用的cancel btn */
+.T-comfirmfdcbtn {
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+  color: #f9a451;
+  z-index: 1;
+  position: absolute;
+  right: 0.25rem;
+  /* background: yellow; */
+}
+/* 二次確認小卡 在head */
+.T-comfirmtwowrapper {
+  width: 13rem;
+  height: 8rem;
+  background: white;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 11rem;
+  left: 1.5rem;
+  box-shadow: 0px 3px 12px #707070;
+}
+.T-comfirmtwowrapper h5 {
+  line-height: 2rem;
+}
+.T-comfirmtwobtn {
+  width: 3rem;
+  height: 3rem;
+  background: #4691f6;
+  margin-top: 1.5rem;
+  margin-left: 5rem;
+}
+
+.M-cbtnmark {
+  font-size: 3rem;
+}
+
+/* ------------------會員中心好友列表小卡---------------- */
+.M-friendcollectWrapper {
+  /* width: 46.875rem; */
+  width: 54rem;
+  /* height: 10.75rem; */
+  padding: 0.3rem;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.M-friendcollectCard {
+  width: 20rem;
+  height: 10rem;
+  /* background: teal; */
+  border: 1px solid #adb6bd;
+  padding: 0.6rem;
+  margin: 2rem;
+  /* position: relative; */
+  display: flex;
+}
+
+.M-friendcollectCardleft {
+  width: 6.8rem;
+  height: 9rem;
+  /* border: 1px solid black; */
+}
+
+.M-friendcollectPhoto {
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.M-friendcollectClear {
+  margin-top: 0.8rem;
+  border: 1px solid #f9a451;
+  color: #f9a451;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.M-friendcollectCardright {
+  width: 11rem;
+  height: 9rem;
+  /* border: 1px solid black; */
+}
+
+.M-friendcollectCardright h5 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  line-height: 4rem;
+}
+
+.M-friendcollectCardright p {
+  font-size: 1rem;
+  color: #adb6bd;
+  overflow: hidden;
+  /* 指定保留行數*/
+  line-height: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.M-friendcollectDot {
+  width: 1rem;
+  height: 1rem;
+  background: green;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 7.5rem;
+}
+
+.M-friendcollectCardright span {
+  margin-left: 0.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 900;
+}
+
+/* -----會員主頁視覺牆--------MindexViewwall---------------- */
+.M-gameviewWall {
+  /* width: 46.875rem; */
+  /* height: 11.85rem; */
+  /* background: lightpink; */
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+}
+
+.M-viewwallPart {
+  /* 依內容決定寬 */
+  /* width: 23.4375rem; */
+  height: 11.85rem;
+  /* border: 1px solid green; */
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.M-vwpuzzleWrapper {
+  width: 13.8rem;
+  height: 11.8rem;
+  margin: 0 0.4rem;
+  /* border: 1px solid red; */
+}
+
+.M-vwbigPuzzle {
+  width: 100%;
+  height: 7rem;
+  /* background: lightsalmon; */
+  /* margin-bottom: 0.45rem; */
+}
+.M-vwbigPuzzle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.M-vwsmlPuzzleWrapper {
+  padding-top: 0.2rem;
+  width: 100%;
+  height: 4.5rem;
+  /* border: 1px solid teal; */
+  display: flex;
+}
+.M-vwsmlPuzzleWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.M-vwsmlPuzzleLeft {
+  width: 50%;
+  height: 4.2rem;
+  /* background: lightsteelblue; */
+}
+.M-vwsmlPuzzleLeft img {
+  object-fit: cover;
+}
+
+.M-vwsmlPuzzleRight {
+  width: 50%;
+  height: 4.2rem;
+  margin-left: 0.4rem;
+  /* background: lightsteelblue; */
+}
+.M-vwsmlPuzzleRight img {
+  object-fit: cover;
+}
+
+/* ------------------------------------視覺牆空白頁------------------ */
+
+.M-vwblockWrapper {
+  width: 23.4375rem;
+  margin: 0 auto;
+  height: 15rem;
+  border: 2px solid #2d6d4b;
+  text-align: center;
+}
+.M-vwblockWrapper h2 {
+  line-height: 5rem;
+}
+.M-vwblockmarker {
+  font-size: 5rem;
+  color: #2d6d4b;
+}
+
+/* ------------M-mygameListWrapper---遊戲倉庫----------- */
+
+.M-mygameListWrapper {
+  width: 60rem;
+  /* height: 80rem; */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  position: relative;
+}
+.M-mygameListcard {
+  margin: 2rem 2rem;
+  width: 16rem;
+  /* height: 10.416875rem; */
+  /* background: teal; */
+  /* overflow: hidden; */
+  position: relative;
+  /* box-shadow: 0px 0px 10px #adb6bd; */
+}
+.M-mygameImgwrapper {
+  width: 16rem;
+  height: 7.5rem;
+  transform: scale(0.8);
+  transition: 0.75s;
+  box-shadow: 0px 3px 2px #707070;
+}
+.M-mygameImgwrapper:hover {
+  transform: scale(1);
+  box-shadow: 0px 3px 12px #707070;
+}
+.M-mygameListcard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.M-mygameUplayer {
+  width: 15.625rem;
+  height: 10.416875rem;
+  background: teal;
+  padding-top: 3rem;
+  text-align: center;
+  position: absolute;
+  /* opacity: 0; */
+  display: none;
+  transition: 0.5s;
+  top: 0;
+}
+/* ---------------有莫名跳動要排除---------- */
+.M-mygameUplayer:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+.M-mygameUplayer h5 {
+  /* font-size: 2rem; */
+  /* transform: scale(0.7); */
+}
+.M-mygameUplayer h5:hover {
+  /* transform: scale(0.85); */
+}
+/* 橫線再補 */
+.M-mygameUnderline {
+  width: 20%;
+}
+.M-mygameUnderline:hover {
+  width: 80%;
+  margin: 0 auto;
+  transition: 0.5s;
+  border-top: 1px solid black;
+}
+
+/* --------MindexChangeavatar--紙娃娃小卡------- */
+/* //為了可以移動小卡用的wrapper */
+
+.M-dollMoveWrapper {
+  position: absolute;
+  z-index: 1;
+  transition: 0.75s;
+  left: 0.05rem;
+  top: -1rem;
+}
+/* 功能取代 */
+/* .M-dollMoveWrapper {
+  top: -50rem;
+} */
+
+.M-dollcardWrapper {
+  width: 23.2rem;
+  height: 41.5rem;
+  /* border: 1px solid black; */
+  background: white;
+  position: relative;
+  border: 0.5px solid #adb6bd;
+}
+
+/* canvas容器 */
+.M-dollcardMajor {
+  width: 14.375rem;
+  height: 14.375rem;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+/* 頭部選擇區 */
+.M-dollhControlgroup {
+  width: 22rem;
+  height: 3rem;
+  /* border: 1px solid blue; */
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.M-dollhControlgroup h5 {
+  line-height: 3rem;
+  font-weight: 900;
+}
+
+.M-dollhSelect {
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2.5rem;
+  /* background: greenyellow; */
+}
+
+.M-dollhimgOuter {
+  margin-top: 1rem;
+  width: 23.1rem;
+  height: 5rem;
+  /* border: 1px solid violet; */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 圖片承載器 */
+.M-dollhimgList {
+  list-style: none;
+  width: 50rem;
+  height: 5rem;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+  /* -webkit-flex-wrap: nowrap; */
+}
+
+/* 圖片容器設定 */
+.M-dollhimgList li {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 5px;
+  /* background: yellow; */
+  /* position: absolute; */
+}
+
+/* 圖片設定 */
+.M-dollhimgList li > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 下半身選擇 */
+/* 圖片容器設定 */
+/* 圖片承載器 */
+.M-dollbimgList {
+  list-style: none;
+  width: 50rem;
+  height: 5rem;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+
+  /* -webkit-flex-wrap: nowrap; */
+}
+
+/* 圖片容器設定 */
+.M-dollbimgList li {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 5px;
+  /* background: yellow; */
+  /* position: absolute; */
+}
+
+/* 圖片設定 */
+.M-dollbimgList li > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.M-dollconfrimBtn {
+  display: inline-block;
+  margin-top: 2rem;
+  border: 1px solid #79cee2;
+  color: #79cee2;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  margin-left: 8rem;
+  text-decoration: none;
+}
+
+.M-dollcancelBtn {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #f9a451;
+  /* background: teal; */
+  position: absolute;
+  right: 0.3rem;
+  top: 0.3rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.M-dollcancelBtn:hover {
+  color: #e48729;
+}
+
+/* ........MazenpListcard....按讚商品列表小卡 */
+.M-azenproductWrapper {
+  width: 55rem;
+  /* height: 10.75rem; */
+  padding: 0.3rem;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.M-azenproductCard {
+  width: 24rem;
+  height: 10rem;
+  margin: 0.5rem auto;
+  /* background: teal; */
+  position: relative;
+  display: flex;
+  transition: 0.75s;
+  box-shadow: 0px 3px 6px #707070;
+  transform: scale(0.85);
+}
+.M-azenproductCard:hover {
+  transform: scale(1);
+  box-shadow: 0px 3px 12px #707070;
+}
+
+.M-azenproductImg {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid #adb6bd; */
+}
+.M-azenproductImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.M-azenproductDes {
+  width: 50%;
+  height: 100%;
+  padding-left: 0.2rem;
+  /* border: 1px solid #adb6bd; */
+  border-left: 0;
+}
+
+.M-azenproductDes p {
+  margin-top: 2.8rem;
+  font-size: 0.8rem;
+  /* 指定保留行數*/
+  line-height: 1.2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.M-azenproductDesbtn {
+  /* border: 1px solid #79cee2; */
+  background: white;
+  border: 1px solid #79cee2;
+  margin-right: 0.3rem;
+  color: #79cee2;
+  padding: 5px;
+  float: right;
+  cursor: pointer;
+}
+.M-azenproductDesbtn:hover {
+  color: white;
+  background: #79cee2;
+}
+
+.M-azenproductName {
+  width: 10rem;
+  height: 2rem;
+  font-size: 0.95rem;
+  background: #79cee2;
+  line-height: 2rem;
+  color: white;
+  /* border: 1px solid #79cee2; */
+  /* padding: 4px; */
+  position: absolute;
+  top: 0.5rem;
+  left: 9rem;
+  text-align: center;
+  box-shadow: 0px 3px 12px #707070;
+}
+
+.M-azenproductName span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+/* --------------MmyCoupon------------我的折價券----------- */
+.M-myCPwrapper {
+  width: 46.875rem;
+  /* height: 10rem; */
+  margin: 0 auto;
+  background: lightblue;
+}
+.M-myCPlistTop {
+  width: 46.875rem;
+  height: 4rem;
+  border: 1px solid lightcoral;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.3rem;
+}
+.M-myCPlistTop h6 {
+  line-height: 3.5rem;
+  margin-left: 2rem;
+}
+.M-myCPlistTop span {
+  line-height: 3.5rem;
+}
+.M-myCPlistswitch {
+  margin-top: 0.15rem;
+  margin-left: 8rem;
+  width: 3rem;
+  height: 3rem;
+  background: lightsalmon;
+}
+.M-myCPlistDown {
+  padding: 1rem;
+  width: 46.875rem;
+  height: 50rem;
+  background: lightpink;
+}
+.M-mycupon {
+  margin: 0 auto 1rem;
+  width: 22.5rem;
+  height: 15rem;
+  border: 1px solid blue;
+}
+.M-mycupon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* -------------Mcuponleft-----------------折價券側頁------------------ */
+/* ---------交給首頁左側管理互動 */
+
+.M-leftcuponwrapper {
+  background: white;
+  position: absolute;
+  right: -19.9rem;
+  bottom: -4.5rem;
+  box-shadow: 0px 3px 2px #707070;
+  transition: 0.75s;
+  z-index: -1;
+  opacity: 0;
+}
+.M-leftcuponwrapper.active {
+  z-index: 1;
+  opacity: 1;
+}
+.M-mycupontopbtn {
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-top: 0.15rem;
+  text-align: center;
+  background: white;
+  color: #79cee2;
+  z-index: 1;
+  /* border: 0.5px solid black; */
+  /* background: rgb(160, 160, 44); */
+  transition: 0.75s;
+  position: absolute;
+  right: 0.4rem;
+  top: 9.2rem;
+  cursor: pointer;
+}
+.M-mycupontopbtn:hover {
+  color: #4691f6;
+}
+.M-mycupontopbtn.active {
+  z-index: 2;
+  right: -3rem;
+  top: 9.2rem;
+}
+/* --------------- */
+.M-mycuponlistwrapper {
+  width: 20rem;
+  /* border: 1px solid black; */
+}
+.M-mycupontop {
+  width: 20rem;
+  height: 3.5rem;
+  background: white;
+  /* border: 1px solid black; */
+  margin-bottom: 0.3rem;
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 3px 6px #707070;
+}
+
+.M-mycupontop h5 {
+  line-height: 3.5rem;
+}
+.M-singlecupwrapper {
+  width: 18rem;
+  /* height: 12rem; */
+  padding: 0.4rem;
+  margin: 2rem auto;
+  background: #fbe251;
+  box-shadow: 0px 3px 2px #707070;
+
+  transform: scale(0.8);
+  transition: 0.75s;
+}
+.M-singlecupwrapper:hover {
+  transform: scale(1);
+  box-shadow: 0px 3px 12px #707070;
+}
+
+.M-singlecupwrapper h5 {
+  display: inline;
+  font-size: 1rem;
+}
+.M-singlecupphoto {
+  width: 15rem;
+  height: 7rem;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+.M-singlecupphoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* -----------MindexcomCard----好友發文小卡 */
+.M-fcomlistWrapper {
+  width: 54rem;
+  height: 28rem;
+  /* padding: 0 5rem; */
+  margin: 0 auto;
+  /* border: 1px solid white; */
+  display: flex;
+}
+.M-comuWrapper {
+  width: 280px;
+  height: 386px;
+  margin: 2rem 1rem;
+  /* border: 1px solid black; */
+  /* margin: 50px auto; */
+  /* border-radius: 10px; */
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 3px 2px #707070;
+  transition: 0.75s;
+}
+/* 同時調整父與子項CSS */
+.M-comuWrapper:hover,
+.M-comuWrapper:hover img {
+  border-radius: 25px;
+  transform: scale(0.9);
+}
+
+.M-comuPost {
+  width: 100%;
+  height: 100%;
+}
+
+.M-comuBody {
+  width: 100%;
+  height: 79%;
+  /* border: 1px solid red; */
+}
+
+.M-comuHead {
+  width: 100%;
+  height: 50%;
+  /* border: 1px solid black; */
+  /* background: url('/public/images/member/mygameSample.jpg') no-repeat;
+  background-position: center;
+  background-size: cover; */
+  /* box-shadow: 0px 3px 6px #707070; */
+}
+.M-comuHead img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.75s;
+}
+/* .M-comuHead img:hover {
+  border-radius: 25px;
+  transform: scale(0.9);
+} */
+
+.M-comuHead_des {
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 45%;
+  /* border: 1px solid teal; */
+}
+
+.M-comuHead_des h5 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 10px;
+}
+
+.M-comuHead_des h6 {
+  color: #adb6bd;
+  margin-top: 12px;
+  font-size: 0.8rem;
+}
+
+.M-comuHead_des p {
+  /* margin-top: 15px; */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.M-comuFoot {
+  width: 100%;
+  height: 21%;
+  /* border: 1px solid teal; */
+  border-top: 0;
+  position: relative;
+}
+
+.M-comuFoot svg {
+  fill: #79cee2;
+}
+
+.M-comuPoster {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid black;
+  overflow: hidden;
+  position: absolute;
+  bottom: 33%;
+  left: 8%;
+}
+
+.M-comuPoster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.75s;
+}
+
+.M-comuDes {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+.M-comuDes h5 {
+  display: inline-block;
+  line-height: 5.5rem;
+}
+
+/* -----------Mbcenterindex----會員中心主頁---- */
+
+.M-indexWrapper {
+  max-width: 85.375rem;
+  /* height: 50rem; */
+  /* background: teal; */
+  margin: 0 auto;
+  margin-top: 1rem;
+  /* border: 1px solid teal; */
+  display: flex;
+}
+.M-indexLeftContainer {
+  width: 23.4375rem;
+  /* height: 50rem; */
+  /* background: lightblue; */
+}
+.M-indexRightContainer {
+  width: 61.9375rem;
+  /* height: 50rem; */
+  /* background: green; */
+}
+/* normal首頁第一層 */
+.M-indexRightlayer1 {
+  width: 61.9375rem;
+  height: 50rem;
+  /* background: lightgreen; */
+}
+.M-indexRightlayer1 h4 {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+/* normal首頁第二層 */
+.M-indexRightlayer2 {
+  width: 61.9375rem;
+  /* height: 50rem; */
+  /* background: blue; */
+}
+/* normal首頁第三層 */
+.M-indexRightlayer3 {
+  width: 61.9375rem;
+  /* height: 50rem; */
+  /* background: orange; */
+}
+/* normal首頁第四層 */
+.M-indexRightlayer4 {
+  width: 61.9375rem;
+  text-align: center;
+  /* height: 50rem; */
+  /* background: lightslategray; */
+}
+.M-indexRightlayer4 h5 {
+  margin-top: 2rem;
+}
+.layerDisappear {
+  display: none;
+}
+
+/* 標題橫線樣式 */
+.M-f-latest-title {
+  display: flex;
+}
+.M-f-latest-title span {
+  font-size: 1.5rem;
+}
+
+.M-f-latest-title > span {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.M-f-latest-title::after,
+.M-f-latest-title::before {
+  content: '';
+  display: block;
+  flex: 100;
+  border-bottom: 4px solid;
+  transform: translateY(-10px);
+  border-bottom-color: #2d6d4b;
+  /* border-bottom-color: #adb6bd; */
+}
+
+.M-f-latest-title::before {
+  flex: 20px;
+}
+/* RWD */
+@media screen and (max-width: 576px) {
+  /* 會員中心主容器 */
+  .M-indexWrapper {
+    max-width: 23.4375rem;
+    /* background: red; */
+    display: block;
+  }
+  /* 會員中心左側 */
+  .M-indexRightContainer {
+    width: 23.4375rem;
+    /* background: lightsalmon; */
+  }
+  .M-indexRightlayer1 {
+    text-align: center;
+  }
+  .M-indexRightlayer1 h4 {
+    margin: 0;
+  }
+  /* 會員中心右側一層 */
+  /* .M-indexRightContainer {
+  } */
+
+  .M-indexRightlayer1 {
+    width: 23.4375rem;
+    height: 125rem;
+  }
+  /* 視覺牆 */
+  .M-gameviewWall {
+    width: 23.4375rem;
+    flex-direction: column;
+    padding: 0;
+  }
+  .M-gameviewWall {
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .M-viewwallPart {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* 好友發文小卡 */
+  .M-fcomlistWrapper {
+    flex-direction: column;
+    width: 24rem;
+    height: 100%;
+  }
+  .M-comuPoster {
+    left: 1.58rem;
+    bottom: 1.55rem;
+  }
+
+  .M-comuWrapper {
+    margin: 2rem 3rem;
+  }
+
+  /* 會員中心右側二層 */
+  .M-indexRightlayer2 {
+    width: 23.4375rem;
+  }
+  /* 會員中心右側三層 */
+
+  .M-indexRightlayer3 {
+    width: 23.4375rem;
+  }
+
+  /* 折價券滑動 */
+  .M-leftcuponwrapper.active {
+    width: 20rem;
+    height: 45rem;
+    z-index: 1;
+    opacity: 1;
+    top: 12rem;
+    left: 3.2rem;
+  }
+  .M-mycupontopbtn.active {
+    z-index: 2;
+    right: 0.25rem;
+    top: 12rem;
+  }
+}
