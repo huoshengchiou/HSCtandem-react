@@ -52,7 +52,7 @@ function Header() {
         )
         const response = await fetch(request)
         const payload = await response.json()
-        console.log(payload)
+        // console.log(payload)
 
         if (payload.success) {
           setAva(payload.body.mbAva)
@@ -151,9 +151,11 @@ function Header() {
       <nav className="T-navWrapper">
         {/* logo部分------------------ */}
         <div className="T-logoWrapper">
-          <div className="T-logo">
-            <img src={logo} className="" alt="Logo" />
-          </div>
+          <Link to="/">
+            <div className="T-logo">
+              <img src={logo} className="" alt="Logo" />
+            </div>
+          </Link>
         </div>
         {/* //RWD後切換選單 */}
         <div className="T-rwdmenuwrapper">
@@ -223,9 +225,10 @@ function Header() {
               comfirmfcardon ? 'active' : ''
             }`}
           >
-            {/* 加好友提示卡離開按鈕 */}
+            {/* 加好友提示卡離開按鈕 //外加觸發自己消失*/}
             <div
               className="T-comfirmfdcbtn"
+              style={{ display: `${comfirmfcardon ? '' : 'none'}` }}
               onClick={() => {
                 setComfirmfcardon(false)
               }}

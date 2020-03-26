@@ -56,7 +56,7 @@ function MindexcomCard() {
       {postfromfriends.map((val, idx) => {
         return (
           <>
-            <div className="M-comuWrapper">
+            <div className="M-comuWrapper" key={idx}>
               <div className="M-comuPost">
                 <div className="M-comuBody">
                   <div className="M-comuHead">

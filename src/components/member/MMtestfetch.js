@@ -4,6 +4,18 @@ import $ from 'jquery'
 
 function MMtestfetch() {
   const divOneRef = React.createRef()
+  // 測試get
+
+  const gosomewhere = () => {
+    async function getmethod() {
+      const response = await fetch(
+        'http://localhost:6001/tandem/member/redirectpwdset',
+        { method: 'GET' }
+      )
+      const payload = await response.json()
+    }
+    getmethod()
+  }
 
   // 底下測試fetch
   const getfriendinfo = () => {
@@ -11,7 +23,7 @@ function MMtestfetch() {
     const input = { mbId: 24 }
     async function Findfriendinfo(mbId, callback) {
       const request = new Request(
-        'http://localhost:6001/tandem/member/logout',
+        'http://localhost:6001/tandem/member/redirectpedset',
         {
           method: 'POST',
           body: JSON.stringify(mbId),
@@ -39,6 +51,14 @@ function MMtestfetch() {
     <>
       <button
         onClick={() => {
+          gosomewhere()
+        }}
+      >
+        get
+      </button>
+
+      <button
+        onClick={() => {
           getfriendinfo()
         }}
       >
@@ -46,6 +66,11 @@ function MMtestfetch() {
       </button>
 
       <button onClick={() => {}}>move</button>
+
+      <a href="http://localhost:6001/tandem/member/redirectpedset">
+        take me there
+      </a>
+
       <div
         ref={divOneRef}
         style={{ width: '3rem', height: '3rem', backgroundColor: 'teal' }}

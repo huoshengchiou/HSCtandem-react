@@ -75,7 +75,7 @@ function Mfriendlistcard() {
         return (
           <>
             {/* <!-- 朋友列表小卡 始--> */}
-            <div className="M-friendcollectCard">
+            <div className="M-friendcollectCard" key={idx}>
               {/* <!-- 小卡左側 --> */}
               <div className="M-friendcollectCardleft">
                 <div className="M-friendcollectPhoto">
@@ -110,9 +110,19 @@ function Mfriendlistcard() {
     </>
   )
 
+  const nofriendlist = (
+    <>
+      <div className="M-friendcollectblock"></div>
+    </>
+  )
+
   return (
     <>
-      <div className="M-friendcollectWrapper">{myfriendlist}</div>
+      <div className="M-friendcollectWrapper">
+        {/* {myfriend.length ? myfriendlist : nofriendlist} */}
+
+        {myfriend.length ? myfriendlist : nofriendlist}
+      </div>
     </>
   )
 }

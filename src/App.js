@@ -19,7 +19,7 @@ function App() {
     <Router>
       <>
         <Header />
-        {/* <Mbtestpage /> */}
+        <Mbtestpage />
         <Switch>
           <Route exact path="/">
             {/* <Home /> */}

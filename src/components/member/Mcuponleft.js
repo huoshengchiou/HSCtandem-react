@@ -32,35 +32,35 @@ function Mcuponleft() {
         val.sDate = val.sDate.split('T')[0]
       })
       setCuponData(payload)
-      console.log(payload)
+      // console.log(payload)
     }
     //呼叫上方fetch送後端
     Findcuponinfo(input)
   }
 
-  const cuponlist = (
-    <>
-      {cupondata.map((val, idx) => {
-        return (
-          <>
-            <h4>{val.sTitle}</h4>
-            <p>{val.sDate}</p>
-            <div className="M-mycupon">
-              <img src={`data:image/png;base64,${val.sCoupon}`} alt="" />
-            </div>
-          </>
-        )
-      })}
-    </>
-  )
+  // const cuponlist = (
+  //   <>
+  //     {cupondata.map((val, idx) => {
+  //       return (
+  //         <>
+  //           <h4 key={idx}>{val.sTitle}</h4>
+  //           <p>{val.sDate}</p>
+  //           <div className="M-mycupon">
+  //             <img src={`data:image/png;base64,${val.sCoupon}`} alt="" />
+  //           </div>
+  //         </>
+  //       )
+  //     })}
+  //   </>
+  // )
 
   const mycuponlist = (
     <>
       {cupondata.map((val, idx) => {
         return (
           <>
-            <div className="M-singlecupwrapper">
-              <h5>{val.sTitle}</h5> <span>{val.sDate}</span>
+            <div className="M-singlecupwrapper" key={idx}>
+              <h5>{val.sTitle}</h5>
               <div className="M-singlecupphoto">
                 <img src={`data:image/png;base64,${val.sCoupon}`} alt="" />
               </div>

@@ -71,11 +71,13 @@ function Mlogcard() {
   useEffect(() => {
     let email_pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
     if (userlgE === '' || !email_pattern.test(userlgE)) {
-      setlgEError(true)
-      return console.log('郵件格式不正確')
+      // 郵件格式不正確
+
+      return setlgEError(true)
     } else {
-      setlgEError(false)
-      return console.log('mail正確')
+      // 郵件格式正確
+
+      return setlgEError(false)
     }
   }, [userlgE])
   // 打包所有資訊，套上資料表用的key
@@ -143,21 +145,21 @@ function Mlogcard() {
   useEffect(() => {
     let email_pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
     if (userRE === '' || !email_pattern.test(userRE)) {
-      setReError(true)
-      return console.log('註冊發生錯誤')
+      // 註冊發生錯誤
+      return setReError(true)
     } else {
-      setReError(false)
-      console.log('註冊mail正確')
+      // 註冊mail正確
+      return setReError(false)
     }
   }, [userRE])
   // 檢查註冊pwd輸入格式
   useEffect(() => {
     if (userRpwd === '' || userRpwd !== userRpwd2) {
-      setRepwdError(true)
-      return console.log('發生錯誤')
+      // 密碼重複檢驗發生錯誤
+      return setRepwdError(true)
     } else {
-      setRepwdError(false)
-      console.log('密碼比對正確')
+      // 密碼重複比對正確
+      return setRepwdError(false)
     }
   }, [userRpwd2])
 
@@ -244,7 +246,7 @@ function Mlogcard() {
             <AiOutlineCloseCircle />
           </div>
           <div className="M-FgpwdCardpic">
-            <img src="/images/member/fgpwdpic.jpg" alt="" />
+            <img src="/images/member/fgpwdbg.svg" alt="" />
           </div>
           <h6>請輸入電子信箱</h6>
           <input
@@ -264,6 +266,33 @@ function Mlogcard() {
           >
             寄送驗證信
           </button>
+        </div>
+
+        {/* 卡片切換按鈕 */}
+        <div
+          className="M-newlogcardswitchbtn"
+          onClick={() => {
+            setLogSwitch(!logswitch)
+          }}
+        >
+          <div
+            className={`M-newlogcardswitchbtnChild1 ${
+              logswitch ? 'active' : ''
+            }`}
+          ></div>
+          <div
+            className={`M-newlogcardswitchbtnChild2 ${
+              logswitch ? 'active' : ''
+            }`}
+          ></div>
+
+          <div
+            className={`M-jumpshadow ${logswitch ? 'active' : 'active1'}`}
+          ></div>
+
+          <div className={`M-jump ${logswitch ? 'active' : 'active1'}`}>
+            <img src="/images/member/knight.svg" alt="" />
+          </div>
         </div>
         {/* <!-- 登入卡 --> */}
 
@@ -325,12 +354,12 @@ function Mlogcard() {
             >
               登入
             </button>
-            <div
+            {/* <div
               className="M-loginSwitch"
               onClick={() => {
                 setLogSwitch(!logswitch)
               }}
-            ></div>
+            ></div> */}
           </div>
         </div>
         {/* -----------------註冊卡--------------- */}
@@ -399,12 +428,12 @@ function Mlogcard() {
             >
               註冊
             </button>
-            <div
+            {/* <div
               className="M-regSwitch"
               onClick={() => {
                 setLogSwitch(!logswitch)
               }}
-            ></div>
+            ></div> */}
           </div>
         </div>
       </div>

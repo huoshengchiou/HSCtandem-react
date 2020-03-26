@@ -37,7 +37,7 @@ function MdetectaddF(props) {
         )
 
         const response = await fetch(request)
-        console.log('add friend fetch完成')
+        // console.log('add friend fetch完成')
         const payload = await response.json()
         // if (payload) {
         //   // console.log(payload)
@@ -126,6 +126,7 @@ function MdetectaddF(props) {
               <div
                 className="M-cffrienddesLeftbtn"
                 onClick={() => {
+                  // 暫時關掉功能，增加sweetalert
                   props.confrimtwo()
                   // yesiamfriend()
                 }}

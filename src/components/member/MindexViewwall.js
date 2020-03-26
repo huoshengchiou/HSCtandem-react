@@ -142,10 +142,15 @@ function MindexViewwall() {
       </div>
     </>
   )
+  const blockwall2 = (
+    <>
+      <div className="M-vwblockWrapper"></div>
+    </>
+  )
 
   // <>{payloadok ? viewwalllist : blockwall}</>
 
-  return <>{payloadok ? viewwalllist : blockwall}</>
+  return <>{payloadok ? viewwalllist : viewwalllist}</>
 }
 
 export default MindexViewwall

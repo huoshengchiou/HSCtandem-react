@@ -21,7 +21,7 @@ function MazenpListcard() {
       {myazenlist.map((val, idx) => {
         return (
           <>
-            <div className="M-azenproductCard">
+            <div className="M-azenproductCard" key={idx}>
               <div className="M-azenproductImg">
                 <img src={`/images/shop/small_Img/${val.itemImg}`} alt="" />
               </div>

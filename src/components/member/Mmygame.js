@@ -27,7 +27,7 @@ function Mmygame() {
         }
       )
       const response = await fetch(request)
-      console.log('mygame fetch完成')
+      // console.log('mygame fetch完成')
       const payload = await response.json()
       // console.log(payload)
       //TODO
@@ -45,7 +45,7 @@ function Mmygame() {
       {mygamelist.map((val, idx) => {
         return (
           <>
-            <div className="M-mygameListcard" key={val.itemId}>
+            <div className="M-mygameListcard" key={idx}>
               <div className="M-mygameImgwrapper">
                 <img
                   src={`/images/shop/small_Img/${val.itemImg}`}

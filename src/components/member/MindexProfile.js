@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { displayChange, myazenproductlist } from '../../actions/Maction'
-import { AiFillHeart, AiOutlineMore } from 'react-icons/ai'
+import { AiFillHeart } from 'react-icons/ai'
 import { IoIosMore } from 'react-icons/io'
 
 //引入icon
 import {
   AiFillSetting,
-  AiOutlineHome,
-  AiFillPicture,
   AiOutlineCloseCircle,
   AiOutlineGift,
+  AiOutlineRead,
 } from 'react-icons/ai'
+import { MdReplay } from 'react-icons/md'
 
 //引入dollsystem
 import MindexChangeavatar from '../../components/member/MindexChangeavatar'
@@ -109,6 +109,9 @@ function MindexProfile() {
     setEditDes(localUserData.mbDes)
   }, [localUserData])
 
+  // 調控生日一次性輸入
+  const [editbdbefore, setEditbdbefore] = useState(false)
+
   const getUseronlocal = () => {
     // 取出localstroage的mbId進行fetch
     const payloadfromLocal = JSON.parse(localStorage.getItem('LoginUserData'))
@@ -131,6 +134,12 @@ function MindexProfile() {
       // console.log('fetch完成')
       const payload = await response.json()
       // console.log(payload)
+      // return console.log('我這裡的payload是' + typeof payload[0].mbBd)
+      // 從這裡監看是否有輸入過生日, 調控state控制欄位顯示方式
+      if (payload[0].mbBd !== '') {
+        setEditbdbefore(true)
+      }
+
       // 回收會員資料之後轉往redux state
       dispatch(loaduserdata(payload[0]))
     }
@@ -298,6 +307,25 @@ function MindexProfile() {
     </>
   )
 
+  // -----------------生日輸入欄位切換---------------
+  const nevereditBd = (
+    <>
+      <input
+        type="text"
+        placeholder="只能一次性輸入"
+        onChange={e => {
+          setEditBrith(e.target.value)
+        }}
+      />
+    </>
+  )
+
+  const haveBd = (
+    <>
+      <h6 className="M-editformh6">{localUserData.mbBd}</h6>
+    </>
+  )
+
   return (
     <>
       <div className="M-indexLeft">
@@ -341,14 +369,14 @@ function MindexProfile() {
           </button>
           {/* 外連個人貼文按鈕 */}
           <div className="M-comLink">
-            <AiFillPicture />
+            <AiOutlineRead />
           </div>
           {/* 回主頁層按鈕 */}
           <div
             className="M-MajorLink"
             onClick={() => dispatch(displayChange(1))}
           >
-            <AiOutlineHome />
+            <MdReplay />
           </div>
 
           {/* 呼叫紙娃娃btn redux*/}
@@ -399,6 +427,7 @@ function MindexProfile() {
                     }}
                   />
                   <select
+                    className="M-editformselect"
                     type="select"
                     value={editgender}
                     onChange={e => {
@@ -408,14 +437,17 @@ function MindexProfile() {
                     <option value="Female">女</option>
                     <option value="Male">男</option>
                   </select>
-                  <input
+                  {/* ------------------生日------------------ */}
+                  {/* <input
                     type="text"
                     placeholder={localUserData.mbBd}
                     onChange={e => {
                       setEditBrith(e.target.value)
                     }}
-                  />
-                  <h6>{localUserData.mbE}</h6>
+                  /> */}
+                  {editbdbefore ? haveBd : nevereditBd}
+                  {/* ------------------生日------------------ */}
+                  <h6 className="M-editformh6">{localUserData.mbE}</h6>
                   <input
                     type="text"
                     placeholder={localUserData.mbPh}
