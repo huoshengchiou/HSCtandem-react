@@ -140,7 +140,7 @@ function MdetectaddF(props) {
                 onClick={() => {
                   // 暫時關掉功能，增加sweetalert
                   props.confrimtwo()
-                  // yesiamfriend()
+                  yesiamfriend()
                 }}
               >
                 成為好友
