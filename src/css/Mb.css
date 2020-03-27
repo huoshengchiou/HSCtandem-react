@@ -915,7 +915,7 @@ border: 1px solid black;
   position: fixed;
   top: 15rem;
   left: 48rem;
-  z-index: 1;
+  z-index: 3;
   /* 暫時測試關掉 */
   /* display: none; */
   box-shadow: 0px 3px 6px #707070;
@@ -1480,13 +1480,16 @@ border: 1px solid black;
   position: relative;
 }
 .M-mygameListshadowbg {
-  width: 60rem;
-  height: 60rem;
-  background-color: white;
-  filter: blur(5px);
+  width: 120rem;
+  height: 56rem;
+  background-color: black;
+  /* filter: blur(5px); */
   opacity: 0.5;
+  z-index: 2;
   /* background: teal; */
-  position: absolute;
+  position: fixed;
+  top: -8.7rem;
+  left: -41.5rem;
 }
 .M-mygameListcard {
   margin: 0.2rem 0.2rem;
