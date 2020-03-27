@@ -131,6 +131,8 @@ function PostProfile(props) {
         let member = members[i]
         return (
           <>
+            {/* 彈跳視窗背景 */}
+            <div className={`M-popUpDiv ${pop ? 'active' : ''}`}></div>
             <div className="container my-5">
               <div className="row">
                 <div className="col-8">
@@ -236,22 +238,57 @@ function PostProfile(props) {
                       </p>
                     </div>
                     {member.mbId !== loginUserId ? (
-                      <div
-                        className="C-profileaddbtn"
-                        addmbID={member.mbId}
-                        addmbNICK={member.mbNick}
-                        addmbDes="要來加我好友嗎?"
+                      <button
+                        className={`C-profileaddbtn 
+                    ${!addingFriend ? '' : 'active'}
+                    `}
+                        // disabled={`${!addingFriend ? 'false' : 'true'}`}
+
+                        addmbid={member.mbId}
+                        addmbnick={member.mbNick}
+                        addmbdes="要來加我好友嗎?"
                         addmbava={member.mbAva}
                         addmbcty={member.mbCountry}
                         onClick={e => {
                           getaddfriendData(e)
                         }}
+                        disabled={`${!addingFriend ? '' : 'disabled'}`}
                       >
-                        加入好友
-                      </div>
+                        {!addingFriend ? '加入好友' : '等待確認好友'}
+                      </button>
                     ) : (
                       ''
                     )}
+                    {/* 加好友卡片彈跳視窗 */}
+                    <div className={`M-popupFriend ${pop ? 'active' : ''}`}>
+                      <div
+                        className={`position-relative ${
+                          !popCancel ? '' : 'nonActive'
+                        }`}
+                        onClick={() => {
+                          setPopCancel(false)
+                          setPop(!pop)
+                        }}
+                      >
+                        <AiOutlineCloseCircle
+                          style={{
+                            fontSize: '30px',
+                            color: '#ec8824 ',
+                            position: 'absolute',
+                            top: '-40px',
+                            right: '20px',
+                            zIndex: '60',
+                            cursor: 'pointer',
+                          }}
+                        />
+                      </div>
+
+                      <div className={`${!popCancel ? '' : 'nonActive'}`}>
+                        <Maddfriendcard />
+                      </div>
+                    </div>
+
+                    {/* ------------------------------------------------------ */}
                     <div
                       style={{
                         height: '1px',
@@ -521,9 +558,10 @@ function PostProfile(props) {
                         fontSize: '30px',
                         color: '#ec8824 ',
                         position: 'absolute',
-                        top: '6px',
-                        left: '89%',
+                        top: '-20px',
+                        right: '12%',
                         zIndex: '30',
+                        cursor: 'pointer',
                       }}
                     />
                   </div>
@@ -532,6 +570,8 @@ function PostProfile(props) {
                     <Maddfriendcard />
                   </div>
                 </div>
+
+                {/* ------------------------------------------------------ */}
                 <div
                   style={{
                     height: '1px',

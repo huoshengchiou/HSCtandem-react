@@ -237,12 +237,14 @@ footer {
 }
 .T-detectgoodfriendwrapper {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   right: 0;
   bottom: 8rem;
 }
 .T-detectgoodfriendwrapper.active {
   bottom: -15rem;
+  z-index: 40;
+
 }
 
 /* 通知鈴鐺 */
