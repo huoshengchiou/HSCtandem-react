@@ -1152,7 +1152,7 @@ border: 1px solid black;
   /* border: 1px solid black; */
   position: absolute;
   background: #f9a451;
-  bottom: 0;
+  bottom: 0.05rem;
   right: 0.25rem;
 }
 

@@ -13,7 +13,7 @@
 /* community index search */
 /* ------------------------------------------------------------------------------ */
 .C-searchDiv{
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 .C-searchDiv figure{
   width:100%;
@@ -23,17 +23,14 @@
 
 
 .C-searchbarDiv{
-  margin-top: 50px;
-  position:absolute;
-  top:90%;
-  left:11%;
+  margin-top: 20px;
 }
 
 .C-searchBar{
   display:block;
   border-radius: 25px;
   border: 2px solid #79cee2;
-  width: 580px;
+  width: 600px;
   padding: 5px 60px;
   margin: 10px auto;
   color:var(--mainColor);
@@ -44,21 +41,19 @@
   
 }
 
-.C-searchBar:hover, .C-searchBar:focus .C-searchBar{
-  width: 1000px;
-}
 
 .C-searchbarIcon{
   color: #79cee2;
   position: absolute;
   font-size: 25px;
   top: 20%;
-  left: 30px;
+  left: 31.5%;
   animation: slideleftIcon 0.5s;
-  z-index: 100;
+  z-index: 1;
 }
  .C-searchButtonGroup{
-   margin: 30px 150px;
+   width:590px;
+   margin: 0 auto;
    display: flex;
  }
 
