@@ -9,7 +9,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai'
 // TODO
 // 點擊相片後取值丟store state寄存在細節頁的atg內，並turn on另一個state開啟細節卡fetch取得資料細節，關掉小卡走另外一個state
 
-function McollectgameDetail() {
+function McollectgameDetail(props) {
   const dispatch = useDispatch()
   const origetdetail = useSelector(state => state.Mmygamedetail)
   // 拿圖片相關訊息
@@ -36,6 +36,7 @@ function McollectgameDetail() {
             className="collectcarddetailCbtn"
             onClick={() => {
               dispatch(closemygamedetail())
+              props.cancelbg()
             }}
           >
             <AiOutlineCloseCircle />

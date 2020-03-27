@@ -1481,8 +1481,11 @@ border: 1px solid black;
 }
 .M-mygameListshadowbg {
   width: 60rem;
-  height: 80rem;
-  background: teal;
+  height: 60rem;
+  background-color: white;
+  filter: blur(5px);
+  opacity: 0.5;
+  /* background: teal; */
   position: absolute;
 }
 .M-mygameListcard {

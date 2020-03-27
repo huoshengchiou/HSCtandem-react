@@ -113,7 +113,11 @@ function Mmygame() {
     <>
       {/* list最外層 */}
       <div className="M-mygameListWrapper">
-        <McollectgameDetail />
+        <McollectgameDetail
+          cancelbg={() => {
+            setShadowOn(false)
+          }}
+        />
         {mygamefinallist}
         <div
           className="M-mygameListshadowbg"
