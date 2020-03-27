@@ -76,6 +76,7 @@ function Header() {
 
   //好友申請卡彈跳
   const [pop, setPop] = useState(false) //彈跳背景
+
   const [comfirmfcardon, setComfirmfcardon] = useState(false)
   // 好友申請二段驗證彈跳
   const [becomfdbtn, setBecomFdbtn] = useState(false)
@@ -235,6 +236,7 @@ function Header() {
               className="T-comfirmfdcbtn"
               style={{ display: `${comfirmfcardon && loginAut ? '' : 'none'}` }}
               onClick={() => {
+                setPop(false)
                 setComfirmfcardon(false)
               }}
             >
@@ -250,7 +252,6 @@ function Header() {
             <div
               className="T-comfirmtwobtn"
               onClick={() => {
-                setComfirmfcardon(false)
                 setBecomFdbtn(false)
               }}
             ></div>
