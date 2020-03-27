@@ -69,7 +69,7 @@ function Maddfriendcard() {
         {/* <!-- 加好友訊息描述 --> */}
         <div className=" M-addfriendDesBefore">
           <div className=" M-addfrienddesLeftBefore">
-            <h6>{addfreindData.addmbNICK}</h6>
+            <h6 style={{ fontWeight: 'bold' }}>{addfreindData.addmbNICK}</h6>
             <p>{addfreindData.addmbDes}</p>
             <div
               className="M-addfrienddesLeftbtn"

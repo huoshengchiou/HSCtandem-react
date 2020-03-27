@@ -75,6 +75,7 @@ function Header() {
   //用另外一個callback傳給確認卡控制狀態
 
   //好友申請卡彈跳
+  const [pop, setPop] = useState(false) //彈跳背景
   const [comfirmfcardon, setComfirmfcardon] = useState(false)
   // 好友申請二段驗證彈跳
   const [becomfdbtn, setBecomFdbtn] = useState(false)
@@ -220,11 +221,15 @@ function Header() {
             <Mlogcard />
           </div>
           {/* //好友提示卡掛入 */}
+          {/* 彈跳視窗背景 */}
+
           <div
             className={`T-detectgoodfriendwrapper ${
               comfirmfcardon ? 'active' : ''
             }`}
           >
+            <div className={`M-popUpDivheader ${pop ? 'active' : ''}`}></div>
+
             {/* 加好友提示卡離開按鈕 //外加觸發自己消失*/}
             <div
               className="T-comfirmfdcbtn"
@@ -268,6 +273,7 @@ function Header() {
                     }`,
                   }}
                   onClick={() => {
+                    setPop(!pop)
                     setComfirmfcardon(!comfirmfcardon)
                   }}
                 />
@@ -300,6 +306,7 @@ function Header() {
           </ul>
         </div>
       </nav>
+
       {/* <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <NavLink className="" to="/">

@@ -98,6 +98,7 @@ function MdetectaddF(props) {
 
   const comfirmfriendcard = (
     <>
+      {/* <div className="position-relative"> */}
       <div className="M-addfriendCardWrapper">
         <div className=" M-addfriendcardcbtn">
           <AiOutlineCloseCircle className="M-cbtnmark" />
@@ -121,7 +122,7 @@ function MdetectaddF(props) {
           {/* <!-- 加好友訊息描述 --> */}
           <div className="M-addfriendDes">
             <div className="M-addfrienddesLeft">
-              <h5>{cardUseData.mbNick}</h5>
+              <h6>{cardUseData.mbNick}</h6>
               <p>{cardUseData.mbDes}</p>
               <div
                 className="M-cffrienddesLeftbtn"
@@ -133,8 +134,8 @@ function MdetectaddF(props) {
               >
                 成為好友
               </div>
-              <h6>來自國度</h6>
-              <h6>{cardUseData.mbCountry}</h6>
+              <span>來自國度 :{cardUseData.mbCountry}</span>
+              {/* <h6></h6> */}
             </div>
             <div className="M-addfrienddesRight"></div>
           </div>
@@ -143,6 +144,7 @@ function MdetectaddF(props) {
           <img src={cardUseData.mbAva} alt="" />
         </div>
       </div>
+      {/* </div> */}
     </>
   )
   const shadowcard = <></>
