@@ -9,10 +9,15 @@ import Mbazenproduct from './Mbazenproduct'
 import Maddfriend from './Maddfriend'
 import Mconfirmfriend from './Mconfirmfriend'
 
+//community
+import communityLike from './communityLike'
+
 import { combineReducers } from 'redux'
 
 const allReducers = combineReducers({
   sample,
+  communityLike,
+
   MindexDisplaychange,
   Mdollcalling,
   MlogAuth,

@@ -1,0 +1,306 @@
+:root{
+    --mainColor:#79cee2;
+    --orange: #F9A451;
+    --gray:#ADB6BD;
+   
+  
+  }
+
+  input,button,textarea:focus{
+      outline:none;
+  }
+
+/* community index search */
+/* ------------------------------------------------------------------------------ */
+.C-searchDiv{
+  margin-bottom: 70px;
+}
+.C-searchDiv figure{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+}
+
+
+.C-searchbarDiv{
+  margin-top: 50px;
+  position:absolute;
+  top:90%;
+  left:11%;
+}
+
+.C-searchBar{
+  display:block;
+  border-radius: 25px;
+  border: 2px solid #79cee2;
+  width: 580px;
+  padding: 5px 60px;
+  margin: 10px auto;
+  color:var(--mainColor);
+  transition: 0.5s;
+}
+.C-searchBar::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:var(--mainColor);
+  
+}
+
+.C-searchBar:hover, .C-searchBar:focus .C-searchBar{
+  width: 1000px;
+}
+
+.C-searchbarIcon{
+  color: #79cee2;
+  position: absolute;
+  font-size: 25px;
+  top: 20%;
+  left: 30px;
+  animation: slideleftIcon 0.5s;
+  z-index: 100;
+}
+ .C-searchButtonGroup{
+   margin: 30px 150px;
+   display: flex;
+ }
+
+ .C-searchButton{
+   min-width: 90px;
+   padding:5px 10px;
+   text-align: center;
+   border: solid 1.5px #79cee2;
+   color:var(--mainColor);
+   background: transparent;
+   border-radius: 25px;
+   margin:10px 4px;
+   cursor: pointer;
+ }
+ .C-searchButton:hover{
+   background: #79cee2;
+   color:white;
+ }
+
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+/* infinite loading div   */ 
+.C-InfiniteLoadFigure{
+    cursor: pointer;
+    transition: .5s;
+    height: 300px;
+    max-width:  500px;
+    object-fit: cover;
+
+
+}
+
+.C-InfiniteLoadFigure:hover {
+    overflow: hidden;
+    border-radius: 25px;
+   /* filter: opacity(0.5); */
+    transform: scale(0.9)
+}
+
+/* postdetail add friend button */
+.C-addFriendbt{
+    transition:.5s;
+}
+.C-addFriendbtn:hover{
+    color:white !important;
+    background: var(--mainColor);
+}
+.C-posticon{
+    font-size: 22px;
+    color:var(--orange);
+}
+
+.C-postbtn:hover{
+    color:var(--mainColor) !important;
+    border-left: 2px solid var(--mainColor) !important;
+
+}
+  /* -------------------------------------------------------------------------------------------- */
+/* postdetail comment delete button  */
+
+.C-commentdeltext{
+    background-color: var(--orange);
+    color:white;
+    padding: 2px 6px;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    animation-duration: .5s;
+    animation-name: slidein;
+    z-index: 1;
+}
+
+.C-postComment:hover .C-commentdeltext {
+    display: block;
+    
+}
+  
+  @keyframes slidein {
+    from {
+      right:4%;
+    }
+    
+    to {
+      right: 2%;
+    }
+  }
+/* comment edit button */
+  .C-commentEdittext{
+    background-color: var(--orange);
+    color:white;
+    padding: 2px 6px;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    animation-duration: .5s;
+    animation-name: editslidein;
+    z-index: 1;
+}
+.C-postComment:hover .C-commentEdittext {
+  display: block;
+  
+}
+@keyframes editslidein {
+  from {
+    right:13%;
+  }
+  
+  to {
+    right: 11%;
+  }
+}
+
+  /* -------------------------------------------------------------------------------------------- */
+ /* postdetail content  */
+
+  .C-postContent{
+    font-size: 14px;
+    line-height: 25px;
+    margin: 8px;
+    overflow: hidden;
+    display: -webkit-box ;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2 ;
+    opacity: 0.6;
+    transition: 0.5s;
+    
+  }
+  .C-postContent:hover {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:10;
+    overflow: visible;
+    max-height: 150px;
+    opacity: 1;
+
+  }
+  /* post detail more button (delete and edit post) */
+  .C-morebutton{
+    font-size: 16px;
+  }
+  .C-morebutton:hover .C-morebuttonList{
+    display: block;
+    cursor: pointer;
+  }
+  .C-morebuttonList li:hover span{
+    background-color: var(--mainColor);
+    color: white;
+  }
+  
+  .C-morebuttonList{
+    width:95px;
+    height:62px;
+    background: white;
+    position: absolute;
+    /* border:1px solid var(--mainColor); */
+    box-shadow: 0px 0px 10px #adb6bd;
+    top:35px;
+    right:-10px;
+    display: none;
+    transition: .5s ease;
+
+  }
+  
+  .C-morebuttonList>li>span{
+    display: block;
+    width:95px;
+    text-align: center;
+    padding:5px 0;
+    color:var(--mainColor);
+    
+    /* background-color: var(--mainColor); */
+  }
+
+  /* -------------------------------------------------------------------------------------------- */
+  /* add post button */
+  .postbuttonStyle{
+    width: 280px;
+    padding: 2px 20px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #79cee2;
+    color: #79cee2;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom:15%;
+    right:11.5%;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .postbuttonStyle:hover{
+    background-color: var(--mainColor);
+    color:white;
+  }
+
+  /* -------------------------------------------------------------------------------------------- */
+  /* profile add friend button */
+
+  .C-profileaddbtn{
+      border: none;
+      width:150px;
+      margin:5px auto 30px;
+      text-align: center;
+      border:1px solid var(--mainColor);
+      color:var(--mainColor);
+      padding:5px 10px;
+      cursor: pointer;
+  }
+
+  .C-profileaddbtn:hover{
+      background-color: var(--mainColor);
+      color:white
+  }
+
+/* profile post */
+
+.C-profilePostImg{
+  width: 100%;
+  /* height: 100%; */
+  background: rgb(238, 238, 238);
+  /* margin-bottom: 100px; */
+  position: relative;
+}
+
+.C-profilePostFigure{
+  object-fit: cover;
+  overflow: hidden;
+  width: 380px;
+  height:200px;
+  margin: 10px 15px;
+  cursor: pointer;
+
+}
+
+  /* -------------------------------------------------------------------------------------------- */
+  /* profile add friend button for pending */
+  .C-profileaddbtn.active{
+    background-color: var(--mainColor);
+      color:white
+  }
+  

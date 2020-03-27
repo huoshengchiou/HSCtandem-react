@@ -148,7 +148,7 @@ function Header() {
 
   return (
     <>
-      <nav className="T-navWrapper">
+      <nav className="T-navWrapper container">
         {/* logo部分------------------ */}
         <div className="T-logoWrapper">
           <Link to="/">
@@ -174,19 +174,19 @@ function Header() {
               {/* 連結細節 */}
               <ul className="T-rwdlinklist">
                 <li className="T-rwdlinkpart">
-                  <NavLink to="/cart">遊戲庫</NavLink>
+                  <NavLink href="/cart">遊戲庫</NavLink>
                 </li>
                 <li className="T-rwdlinkpart">
-                  <NavLink to="/community">社群探索</NavLink>
+                  <NavLink href="/community">社群探索</NavLink>
                 </li>
                 <li className="T-rwdlinkpart">
-                  <NavLink to="/activity">活動揪團</NavLink>
+                  <NavLink href="/activity">活動揪團</NavLink>
                 </li>
                 <li className="T-rwdlinkpart">
-                  <NavLink to="/forum">開發論壇</NavLink>
+                  <NavLink href="/forum">開發論壇</NavLink>
                 </li>
                 <li className="T-rwdlinkpart">
-                  <NavLink to="/bulletin">新聞公告</NavLink>
+                  <NavLink href="/bulletin">新聞公告</NavLink>
                 </li>
               </ul>
             </div>
@@ -197,19 +197,19 @@ function Header() {
           {/* 中央連結細項----------------- */}
           <ul className="T-linklist">
             <li className="T-linkpart">
-              <NavLink to="/cart">遊戲庫</NavLink>
+              <NavLink href="/cart">遊戲庫</NavLink>
             </li>
             <li className="T-linkpart">
-              <NavLink to="/community">社群探索</NavLink>
+              <NavLink href="/community">社群探索</NavLink>
             </li>
             <li className="T-linkpart">
-              <NavLink to="/activity">活動揪團</NavLink>
+              <NavLink href="/activity">活動揪團</NavLink>
             </li>
             <li className="T-linkpart">
-              <NavLink to="/forum">開發論壇</NavLink>
+              <NavLink href="/forum">開發論壇</NavLink>
             </li>
             <li className="T-linkpart">
-              <NavLink to="/bulletin">新聞公告</NavLink>
+              <NavLink href="/bulletin">新聞公告</NavLink>
             </li>
           </ul>
         </div>

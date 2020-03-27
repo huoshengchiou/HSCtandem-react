@@ -7,7 +7,16 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Activity from './pages/activity/Activity'
 import Bulletin from './pages/bulletin/Bulletin'
+
+//                    community pages                          //
 import Community from './pages/community/Community'
+import AddPost from './pages/community/AddPost'
+import Posts from './pages/community/Posts'
+import PostDetail from './pages/community/PostDetail'
+import PostDetailProfile from './pages/community/PostDetailProfile'
+import PostProfile from './pages/community/PostProfile'
+//---------------------------------------------------------------//
+
 import Forum from './pages/forum/Forum'
 import Mbcenterindex from './pages/member/Mbcenterindex'
 import Cart from './pages/shop/Cart'
@@ -29,6 +38,22 @@ function App() {
           </Route>
           <Route path="/bulletin">
             <Bulletin />
+          </Route>
+          {/* //community */}
+          <Route path={`/addpost`}>
+            <AddPost />
+          </Route>
+          <Route path={`/posts`}>
+            <Posts />
+          </Route>
+          <Route path={'/postdetail/:id?'}>
+            <PostDetail />
+          </Route>
+          <Route path={'/postDetailProfile/:id?'}>
+            <PostDetailProfile />
+          </Route>
+          <Route path={'/Communityprofile/:id?'}>
+            <PostProfile />
           </Route>
           <Route path="/community">
             <Community />

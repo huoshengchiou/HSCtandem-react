@@ -988,6 +988,46 @@ border: 1px solid black;
 }
 
 /* ---------------------加好友小卡----------------- */
+/* community revised 加好友小卡*/
+
+/* 好友小卡取消按鈕  */
+.active{
+  display:block;
+}
+.nonActive{
+  display: none;
+}
+.M-popUpDiv{
+  width: 100%;
+  height: 900px;
+  background-color:black;
+  border:1px solid black;
+  z-index:23;
+  position: fixed;
+  top: 0;
+  opacity: 0.5;
+  display: none;
+
+}
+.M-popUpDiv.active{
+  display: block;
+}
+.M-popupFriend{
+  display: none;
+  position: absolute;
+  z-index: 25;
+  transform: scale(1.54);
+  left:-70%;
+  top:15%;
+
+
+}
+.M-popupFriend.active{
+  display:block;
+}
+
+/* ---------------------------------------------------------------- */
+
 .M-addfriendCardWrapper {
   width: 23rem;
   height: 13rem;
@@ -1013,12 +1053,19 @@ border: 1px solid black;
 .M-addfriendPhoto {
   width: 7.5rem;
   height: 7.5rem;
-  border: 1px solid black;
+  /* border: 2px solid #F9A451; */
   background: white;
   border-radius: 50%;
   position: absolute;
   top: 2.7rem;
   left: 0.2rem;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 5px;
+}
+.M-addfriendPhoto img{
+  width: 100%;
+  height: 100%;
 }
 
 .M-addfriendBricktop {
@@ -1036,17 +1083,41 @@ border: 1px solid black;
   /* border: 1px solid black; */
   position: absolute;
   background: #79cee2;
-  bottom: 0.1rem;
+  bottom: 0.05rem;
   right: 0.25rem;
 }
 
+.M-addfriendDesBefore {
+  width: 14rem;
+  margin-left: 3rem;
+  height: 12rem;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 50px;
+  left:-20px;
+  display: flex;
+}
+
+.M-addfrienddesLeftBefore {
+  width: 15rem;
+  height: 12.8rem;
+  position: relative;
+  /* border: 1px solid black; */
+}
+.M-addfrienddesLeftBefore p {
+  margin-left: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 /* ------------確認好友卡--------------- */
 .M-cffriendBricktop {
   width: 8rem;
   height: 2rem;
   /* border: 1px solid black; */
   position: absolute;
-  background: #f9a451;
+  background: #F9A451;
   top: 0;
 }
 
@@ -1055,7 +1126,7 @@ border: 1px solid black;
   height: 2rem;
   /* border: 1px solid black; */
   position: absolute;
-  background: #f9a451;
+  background: #F9A451;
   bottom: 0;
   right: 0.25rem;
 }
@@ -1078,7 +1149,7 @@ border: 1px solid black;
 }
 
 .M-addfrienddesLeft h5 {
-  line-height: 5.5rem;
+  line-height: 5rem;
   font-weight: 900;
   margin-bottom: 1rem;
 }
@@ -1099,20 +1170,29 @@ border: 1px solid black;
 /* 加入連結 */
 
 .M-addfrienddesLeftbtn {
-  width: 6rem;
-  padding: 6px 8px;
+  width: 5rem;
+  padding: 4px 6px;
   font-weight: 900;
+  font-size: 10px;
   text-align: center;
   color: #79cee2;
+  /* color: white; */
   border: 1px solid #79cee2;
   position: absolute;
-  bottom: 2rem;
-  right: 0.2rem;
+  bottom: 5.4rem;
+  right: -2.5rem;
+  cursor: pointer;
+  z-index: 50;
+  transition: .5s;
 }
-.M-addfrienddesLeftbtn:hover {
-  background: #79cee2;
-  color: white;
-  border: 1px solid #79cee2;
+.M-addfrienddesLeftbtn:hover{
+  background-color: #79cee2;
+  color:white;
+  width: 7.5rem;
+
+}
+.M-addfrienddesLeftbtn.active{
+  display: none;
 }
 
 /* -----------確認好友卡------------ */

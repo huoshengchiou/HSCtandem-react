@@ -7,9 +7,10 @@ import IndexSearchBar from '../../components/community/IndexSearchBar'
 import InfiniteScroll from '../../components/community/InfiniteScroll'
 
 // import { gsap } from 'gsap'
-// import Localstorage from '../../Shadow_Data_ver2'
+import Localstorage from '../../Shadow_Data_ver2'
 
 function Community(props) {
+  // const cartNumbers = useSelector(state => state.cartnumbers)
   // const dispatch = useDispatch()
   const [categoryfromchild, getStateCategoryfromchild] = useState([])
   console.log(props.match.url)
@@ -19,7 +20,7 @@ function Community(props) {
 
   return (
     <>
-      {/* <Localstorage /> */}
+      <Localstorage />
 
       <IndexSearchBar />
 
