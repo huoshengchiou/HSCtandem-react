@@ -231,7 +231,11 @@ function Header() {
               comfirmfcardon ? 'active' : ''
             }`}
           >
-            <div className={`M-popUpDivheader ${pop ? 'active' : ''}`}></div>
+            <div
+              className={`M-popUpDivheader ${
+                comfirmfcardon && pop ? 'active' : ''
+              }`}
+            ></div>
 
             {/* 加好友提示卡離開按鈕 //外加觸發自己消失*/}
             <div
