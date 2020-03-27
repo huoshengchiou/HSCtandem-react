@@ -1015,13 +1015,11 @@ border: 1px solid black;
 .M-popUpDiv.active {
   display: block;
 }
-<<<<<<< HEAD
-.M-popUpDivheader{
+.M-popUpDivheader {
   width: 100%;
   height: 900px;
-  background-color:black;
-  border:1px solid black;
-  z-index:23;
+  background-color: black;
+  border: 1px solid black;
   position: fixed;
   top: 0;
   left: 0;
@@ -1029,29 +1027,17 @@ border: 1px solid black;
   display: none;
 }
 
-.M-popUpDivheader.active{
+.M-popUpDivheader.active {
   display: block;
 }
 
-
-.M-popupFriend{
-  display: none;
-  position: absolute;
-  z-index: 25;
-  /* transform: scale(1.54); */
-  left:-30%;
-  top:15%;
-
-
-=======
 .M-popupFriend {
   display: none;
   position: absolute;
   z-index: 25;
-  transform: scale(1.54);
-  left: -70%;
+  /* transform: scale(1.54); */
+  left: -30%;
   top: 15%;
->>>>>>> d7d46c96ffea098056b73d551d5c4ead47e11a2e
 }
 .M-popupFriend.active {
   display: block;
@@ -1065,10 +1051,9 @@ border: 1px solid black;
   /* border: 1px solid black; */
   /* box-shadow: 0px 3px 6px #707070; */
   position: relative;
-  top:-30px;
+  top: -30px;
   left: -30px;
   /* z-index: 100; */
-  
 }
 
 .M-addfriendCardWrapper svg {
@@ -1147,7 +1132,7 @@ border: 1px solid black;
   -webkit-box-orient: vertical;
 }
 /* ------------確認好友卡--------------- */
-.M-addfrienddesLeft{
+.M-addfrienddesLeft {
   width: 15rem;
   height: 12rem;
   position: relative;
@@ -1178,7 +1163,7 @@ border: 1px solid black;
   /* border: 1px solid black; */
   position: absolute;
   top: 45px;
-  left:30px;
+  left: 30px;
   display: flex;
 }
 
@@ -1248,14 +1233,13 @@ border: 1px solid black;
   bottom: 5rem;
   right: 2rem;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 .M-cffrienddesLeftbtn:hover {
   background: #f9a451;
   color: white;
   border: 1px solid #f9a451;
   width: 7.5rem;
-
 }
 
 /* //會被SVG蓋過 */
@@ -1280,7 +1264,7 @@ border: 1px solid black;
   z-index: 1;
   position: absolute;
   right: 2.2rem;
-  top:-2rem;
+  top: -2rem;
   cursor: pointer;
   /* background: yellow; */
 }
