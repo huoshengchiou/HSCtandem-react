@@ -22,9 +22,9 @@ import { useSelector } from 'react-redux'
 
 function Mbcenterindex() {
   // 控制顯示層
-  const dispalyLayer = useSelector(state => state.MindexDisplaychange)
+  // const dispalyLayer = useSelector(state => state.MindexDisplaychange)
   // 正在處理的頁面
-  // const dispalyLayer = 1
+  const dispalyLayer = 3
   return (
     <>
       <div className="M-indexWrapper">

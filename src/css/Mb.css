@@ -1454,6 +1454,12 @@ border: 1px solid black;
   justify-content: space-around;
   position: relative;
 }
+.M-mygameListshadowbg {
+  width: 60rem;
+  height: 80rem;
+  background: teal;
+  position: absolute;
+}
 .M-mygameListcard {
   margin: 0.2rem 0.2rem;
   width: 16rem;

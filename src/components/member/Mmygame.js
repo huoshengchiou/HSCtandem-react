@@ -52,6 +52,7 @@ function Mmygame() {
                   itemID={val.itemId}
                   onClick={e => {
                     getgameDetail(e)
+                    setShadowOn(true)
                   }}
                   alt=""
                 />
@@ -105,6 +106,8 @@ function Mmygame() {
     //呼叫上方fetch送後端
     Findfriendinfo(input)
   }
+  // 背景黑幕state
+  const [shadowon, setShadowOn] = useState(false)
 
   return (
     <>
@@ -112,6 +115,10 @@ function Mmygame() {
       <div className="M-mygameListWrapper">
         <McollectgameDetail />
         {mygamefinallist}
+        <div
+          className="M-mygameListshadowbg"
+          style={{ display: `${shadowon ? '' : 'none'}` }}
+        ></div>
         {/* 個別遊戲小卡 */}
         {/* <div className="M-mygameListcard">
           <img src="/images/member/mygameSample.jpg" alt="" />
