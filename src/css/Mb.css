@@ -470,9 +470,12 @@ body {
 /* } */
 
 .M-avatarTop {
-  border: 1px solid #79cee2;
+  border-bottom: 3px solid #79cee2;
   /* box-shadow: 0px 3px 6px #707070; */
   padding-bottom: 1rem;
+  /* border-top: 10px solid #43341b; */
+}
+.M-avatartop-up {
   display: flex;
 }
 
@@ -514,15 +517,15 @@ body {
 .M-mbDeschagebtn {
   width: 8rem;
   height: 2rem;
-  /* font-size: 1.5rem; */
-  font-weight: 700;
+  font-size: 1rem;
+  /* font-weight: 700; */
   border: 1px solid #79cee2;
   color: #79cee2;
   text-align: center;
   background: white;
   position: absolute;
-  font-weight: 600;
-  left: 4.5rem;
+  /* font-weight: 600; */
+  left: 5rem;
   top: 10rem;
   transition: 0.75s;
   /* margin-left: 5rem; */
@@ -564,10 +567,10 @@ body {
   background: white;
   position: absolute;
   left: 14rem;
-  top: 9rem;
+  top: 9.4rem;
   color: #79cee2;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 .M-comLink:hover {
@@ -579,10 +582,10 @@ body {
   background: white;
   position: absolute;
   left: 17rem;
-  top: 9.1rem;
+  top: 9.3rem;
   color: #79cee2;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 .M-MajorLink:hover {
@@ -604,6 +607,8 @@ border: 1px solid black;
 }
 
 .M-mbdesForm {
+  border: 0.5px solid #adb6bd;
+  border-top: 5px solid #adb6bd;
   text-align: center;
   padding-bottom: 0.4rem;
   box-shadow: 0px 3px 6px #707070;
@@ -622,7 +627,7 @@ border: 1px solid black;
 }
 .M-editLeavebtn {
   display: inline-block;
-  margin-left: 17rem;
+  margin-left: 19rem;
   width: 3rem;
   height: 3rem;
   font-size: 2.5rem;
@@ -687,56 +692,113 @@ border: 1px solid black;
 
 .M-mbdesSub {
   margin-top: 1rem;
-  padding: 5px 5px;
+  padding: 6px 8px;
   border: 1px solid #79cee2;
   color: #79cee2;
-  font-size: 1.875rem;
+  font-size: 1.2rem;
 }
 
-/* 會員頁左邊選鈕 */
+/* 會員頁左邊選鈕     fix------- */
 .M-subbtnGroup {
+  /* border-top: 5px solid #43341b; */
   margin: 10px 0;
   width: 23.2rem;
-  height: 7.8rem;
+  height: 7.9rem;
   /* background: pink; */
-  display: flex;
 }
-
-.M-subbtnGroup button {
+.M-subiconwrapper {
+  display: flex;
+  justify-content: center;
+}
+.M-subicon {
+  margin: 0 0.2rem;
+  width: 2.625rem;
+  height: 2.625rem;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2.6rem;
+  color: #79cee2;
+  /* border: 0.5px solid black; */
+}
+.M-subbtnGroupbrick {
+  width: 100%;
+  height: 3px;
+  background: #adb6bd;
+}
+.M-subbtnwrapper {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.M-sublayerbtn {
   width: 7.8125rem;
+  width: 6rem;
   height: 7.8125rem;
-  line-height: 6rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  border: 0.5px solid #79cee2;
+  height: 3.5rem;
+  /* margin-top: 3.8125rem; */
+  line-height: 2rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  border: 0;
+  margin-top: 0.2rem;
+  margin: 0 0.5rem 0.2rem;
+  /* border: 0.5px solid #79cee2; */
   color: #79cee2;
   text-align: center;
+  border: 1px solid #79cee2;
   background: white;
   padding: 10px;
   text-decoration: none;
   transition: 0.5s;
+  /* box-shadow: 0px 3px 2px #707070; */
+  /* transform: scale(0.95); */
 }
+.M-subiconbtn {
+  border: 0;
+  transition: 0.5s;
+  margin-top: 0.2rem;
+  width: 6rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  box-shadow: 0px 3px 2px #707070;
+  /* transform: scale(0.95); */
+}
+
 .M-subbtnGroup button:focus {
   outline: none;
   color: #f9a451;
+  z-index: 2;
+  box-shadow: 0px 3px 12px #707070;
 }
 .M-subbtnGroup button:hover {
-  border: 0.5px solid #f9a451;
-  color: #f9a451;
-  transform: scale(0.8);
+  background: #79cee2;
+  color: white;
+  /* transform: scale(1.2); */
 }
 
 /* 關注商品列表 */
 .M-LikeproductWrapper {
   width: 23.2rem;
-  border: 1px solid #79cee2;
+  border: 0.5px solid #adb6bd;
   text-align: center;
 }
-.M-LikeproductWrapper h3 {
-  margin-top: 1rem;
-  margin-left: 0.8rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+.M-Likeproducthead {
+  width: 100%;
+  height: 3rem;
+  background: #adb6bd;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0px 3px 2px #707070;
+}
+.M-Likeproducthead h3 {
+  /* margin-top: 1rem; */
+  /* margin-left: 0.8rem;
+  margin-bottom: 1rem; */
+  letter-spacing: 0.2rem;
+  color: #fcfaf2;
+  font-size: 1.2rem;
+  line-height: 3rem;
 }
 
 .M-azenproductListWindow {
@@ -1478,21 +1540,21 @@ border: 1px solid black;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   justify-content: space-around;
   position: relative;
 }
 .M-mygameListshadowbg {
-  width: 120rem;
-  height: 56rem;
+  width: 100%;
+  height: 900px;
   background-color: black;
   /* filter: blur(5px); */
   opacity: 0.5;
   z-index: 2;
   /* background: teal; */
   position: fixed;
-  top: -8.7rem;
-  left: -41.5rem;
+  top: 0;
+  left: 0;
 }
 .M-mygameListcard {
   margin: 0.2rem 0.2rem;
@@ -1878,7 +1940,7 @@ border: 1px solid black;
 .M-mycupontopbtn {
   width: 3rem;
   height: 3rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2.5rem;
   margin-top: 0.15rem;
   text-align: center;
@@ -2162,7 +2224,7 @@ border: 1px solid black;
   flex: 100;
   border-bottom: 4px solid;
   transform: translateY(-10px);
-  border-bottom-color: #005caf;
+  border-bottom-color: #79cee2;
   /* border-bottom-color: #adb6bd; */
 }
 

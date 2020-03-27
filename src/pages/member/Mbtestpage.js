@@ -19,7 +19,7 @@ function Mbtestpage() {
     <>
       {/* <MlogoutButton /> */}
       {/* <Mlogcard /> */}
-      {/* <MMtestfetch /> */}
+      <MMtestfetch />
       {/* <Mgoodfriend /> */}
       {/* <h1>------接受邀請方----</h1> */}
       {/* <MdetectaddF /> */}
