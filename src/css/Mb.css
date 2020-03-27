@@ -1030,6 +1030,9 @@ border: 1px solid black;
 .M-popUpDivheader.active {
   display: block;
 }
+.M-popUpDivheader.close {
+  display: none;
+}
 
 .M-popupFriend {
   display: none;

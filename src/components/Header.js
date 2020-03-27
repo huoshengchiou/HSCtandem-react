@@ -233,14 +233,25 @@ function Header() {
           >
             <div
               className={`M-popUpDivheader ${
-                comfirmfcardon && pop ? 'active' : ''
+                comfirmfcardon && addFevent.addfriendsignal && pop
+                  ? 'active'
+                  : ''
               }`}
+              style={{
+                display: `${addFevent.addfriendsignal && pop ? '' : 'none'}`,
+              }}
             ></div>
 
             {/* 加好友提示卡離開按鈕 //外加觸發自己消失*/}
             <div
               className="T-comfirmfdcbtn"
-              style={{ display: `${comfirmfcardon && loginAut ? '' : 'none'}` }}
+              style={{
+                display: `${
+                  comfirmfcardon && loginAut && addFevent.addfriendsignal
+                    ? ''
+                    : 'none'
+                }`,
+              }}
               onClick={() => {
                 setPop(false)
                 setComfirmfcardon(false)
@@ -257,6 +268,7 @@ function Header() {
                   showConfirmButton: false,
                   timer: 1000,
                 }).then(r => {
+                  setComfirmfcardon(false)
                   window.location.reload()
                 })
               }
@@ -292,7 +304,7 @@ function Header() {
                     }`,
                   }}
                   onClick={() => {
-                    setPop(!pop)
+                    setPop(true)
                     setComfirmfcardon(!comfirmfcardon)
                   }}
                 />
