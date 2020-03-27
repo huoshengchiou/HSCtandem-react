@@ -471,6 +471,7 @@ body {
 
 .M-avatarTop {
   border: 1px solid #79cee2;
+  /* box-shadow: 0px 3px 6px #707070; */
   padding-bottom: 1rem;
   display: flex;
 }
@@ -707,7 +708,7 @@ border: 1px solid black;
   line-height: 6rem;
   font-size: 1.5rem;
   font-weight: 700;
-  border: 1px solid #79cee2;
+  border: 0.5px solid #79cee2;
   color: #79cee2;
   text-align: center;
   background: white;
@@ -720,6 +721,8 @@ border: 1px solid black;
   color: #f9a451;
 }
 .M-subbtnGroup button:hover {
+  border: 0.5px solid #f9a451;
+  color: #f9a451;
   transform: scale(0.8);
 }
 
@@ -727,6 +730,7 @@ border: 1px solid black;
 .M-LikeproductWrapper {
   width: 23.2rem;
   border: 1px solid #79cee2;
+  text-align: center;
 }
 .M-LikeproductWrapper h3 {
   margin-top: 1rem;
@@ -991,39 +995,36 @@ border: 1px solid black;
 /* community revised 加好友小卡*/
 
 /* 好友小卡取消按鈕  */
-.active{
-  display:block;
+.active {
+  display: block;
 }
-.nonActive{
+.nonActive {
   display: none;
 }
-.M-popUpDiv{
+.M-popUpDiv {
   width: 100%;
   height: 900px;
-  background-color:black;
-  border:1px solid black;
-  z-index:23;
+  background-color: black;
+  border: 1px solid black;
+  z-index: 23;
   position: fixed;
   top: 0;
   opacity: 0.5;
   display: none;
-
 }
-.M-popUpDiv.active{
+.M-popUpDiv.active {
   display: block;
 }
-.M-popupFriend{
+.M-popupFriend {
   display: none;
   position: absolute;
   z-index: 25;
   transform: scale(1.54);
-  left:-70%;
-  top:15%;
-
-
+  left: -70%;
+  top: 15%;
 }
-.M-popupFriend.active{
-  display:block;
+.M-popupFriend.active {
+  display: block;
 }
 
 /* ---------------------------------------------------------------- */
@@ -1063,7 +1064,7 @@ border: 1px solid black;
   overflow: hidden;
   padding: 5px;
 }
-.M-addfriendPhoto img{
+.M-addfriendPhoto img {
   width: 100%;
   height: 100%;
 }
@@ -1094,7 +1095,7 @@ border: 1px solid black;
   /* border: 1px solid black; */
   position: absolute;
   top: 50px;
-  left:-20px;
+  left: -20px;
   display: flex;
 }
 
@@ -1117,7 +1118,7 @@ border: 1px solid black;
   height: 2rem;
   /* border: 1px solid black; */
   position: absolute;
-  background: #F9A451;
+  background: #f9a451;
   top: 0;
 }
 
@@ -1126,7 +1127,7 @@ border: 1px solid black;
   height: 2rem;
   /* border: 1px solid black; */
   position: absolute;
-  background: #F9A451;
+  background: #f9a451;
   bottom: 0;
   right: 0.25rem;
 }
@@ -1183,15 +1184,14 @@ border: 1px solid black;
   right: -2.5rem;
   cursor: pointer;
   z-index: 50;
-  transition: .5s;
+  transition: 0.5s;
 }
-.M-addfrienddesLeftbtn:hover{
+.M-addfrienddesLeftbtn:hover {
   background-color: #79cee2;
-  color:white;
+  color: white;
   width: 7.5rem;
-
 }
-.M-addfrienddesLeftbtn.active{
+.M-addfrienddesLeftbtn.active {
   display: none;
 }
 
@@ -1450,11 +1450,12 @@ border: 1px solid black;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  justify-content: space-around;
   position: relative;
 }
 .M-mygameListcard {
-  margin: 2rem 2rem;
+  margin: 0.2rem 0.2rem;
   width: 16rem;
   /* height: 10.416875rem; */
   /* background: teal; */
@@ -1534,6 +1535,7 @@ border: 1px solid black;
   /* border: 1px solid black; */
   background: white;
   position: relative;
+  box-shadow: 0px 3px 12px #707070;
   border: 0.5px solid #adb6bd;
 }
 
@@ -1544,6 +1546,8 @@ border: 1px solid black;
   /* border: 1px solid black; */
   margin: 0 auto;
   margin-top: 1rem;
+  -webkit-filter: drop-shadow(0px 3px 2px #707070);
+  filter: drop-shadow(0px 3px 2px #707070);
 }
 /* 頭部選擇區 */
 .M-dollhControlgroup {
@@ -1649,9 +1653,8 @@ border: 1px solid black;
   border: 1px solid #79cee2;
   color: #79cee2;
   font-size: 1.2rem;
-  margin-left: 2rem;
   padding: 0.5rem;
-  margin-left: 8rem;
+  margin-left: 8.5rem;
   text-decoration: none;
 }
 
@@ -1822,7 +1825,7 @@ border: 1px solid black;
   background: white;
   position: absolute;
   right: -19.9rem;
-  bottom: -1.6rem;
+  bottom: -1.3rem;
   box-shadow: 0px 3px 2px #707070;
   transition: 0.75s;
   z-index: -1;
@@ -2011,11 +2014,12 @@ border: 1px solid black;
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 0.5px solid #adb6bd;
+  /* border: 0.5px solid black; */
   overflow: hidden;
   position: absolute;
   bottom: 33%;
-  left: 8%;
+  left: 8.8%;
 }
 
 .M-comuPoster img {
