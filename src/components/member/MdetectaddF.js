@@ -55,7 +55,18 @@ function MdetectaddF(props) {
           )
         }
       }
-      findfriendevent(input)
+      findfriendevent(
+        input
+        // Swal.fire({
+        //   icon: 'success',
+        //   title: '加好友成功',
+        //   showConfirmButton: false,
+        //   timer: 1000,
+        // }).then(r => {})
+      )
+      // setTimeout(() => {
+      //   window.location.reload()
+      // }, 1000)
     } else {
       // 當local不存在登入資訊送空
       dispatch(confirmfriend([], false))

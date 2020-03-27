@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { NavLink } from 'react-bootstrap'
 import logo from '../logo.svg'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 import {
   AiOutlineCalendar,
   AiOutlineShoppingCart,
@@ -242,7 +244,19 @@ function Header() {
             >
               <AiOutlineCloseCircle />
             </div>
-            <MdetectaddF confrimtwo={() => setBecomFdbtn(true)} />
+            <MdetectaddF
+              confrimtwo={() =>
+                // setBecomFdbtn(true)
+                Swal.fire({
+                  icon: 'success',
+                  title: '加好友成功',
+                  showConfirmButton: false,
+                  timer: 1000,
+                }).then(r => {
+                  window.location.reload()
+                })
+              }
+            />
           </div>
           <div
             className="T-comfirmtwowrapper"
