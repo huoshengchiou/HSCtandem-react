@@ -228,7 +228,7 @@ function Header() {
             {/* 加好友提示卡離開按鈕 //外加觸發自己消失*/}
             <div
               className="T-comfirmfdcbtn"
-              style={{ display: `${comfirmfcardon ? '' : 'none'}` }}
+              style={{ display: `${comfirmfcardon && loginAut ? '' : 'none'}` }}
               onClick={() => {
                 setComfirmfcardon(false)
               }}
