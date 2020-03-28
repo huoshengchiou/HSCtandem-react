@@ -32,8 +32,6 @@ function PostDetail(props) {
     let res = await fetch('http://localhost:6001/items/posts')
     let response = await res.json()
     setPosts(response)
-    // return console.log('response' + JSON.stringify(response))
-    // dispatch(LikeToggle(true, response[0].postLikes))
   }
   useEffect(() => {
     fetchPost()

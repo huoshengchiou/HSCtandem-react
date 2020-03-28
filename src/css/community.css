@@ -114,6 +114,23 @@
     border-left: 2px solid var(--mainColor) !important;
 
 }
+/* added friend */
+.addedfriend{
+  background: var(--orange);
+  color:white;
+  border:  1px solid var(--orange);
+  padding: 5px 10px;
+  width: 150px;
+  position: absolute;
+  left:23.7%;
+  bottom:25.8%;
+  cursor: pointer;
+  display: none;
+}
+.addfriend.active{
+  display: block;
+}
+
   /* -------------------------------------------------------------------------------------------- */
 /* postdetail comment delete button  */
 

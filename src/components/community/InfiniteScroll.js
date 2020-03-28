@@ -2,6 +2,7 @@ import React from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 class Infinitescroll extends React.Component {
   state = {
@@ -9,6 +10,7 @@ class Infinitescroll extends React.Component {
     pageNumber: 1,
     items: 12,
     hasMore: true,
+    LoginUserId: null,
   }
 
   componentDidMount() {
@@ -32,6 +34,8 @@ class Infinitescroll extends React.Component {
   }
 
   render() {
+    console.log('user', this.state.LoginUserId)
+
     return (
       <>
         <InfiniteScroll
@@ -45,9 +49,24 @@ class Infinitescroll extends React.Component {
             <div
               className="col-4 my-4"
               key={brewery.post_id}
-              onClick={() =>
-                (window.location.href = `/postdetail/${brewery.post_id}`)
-              }
+              onClick={() => {
+                const getDatafromlocal = JSON.parse(
+                  localStorage.getItem('LoginUserData')
+                )
+                // const input = { mbId: getDatafromlocal }
+                this.state.LoginUserId = getDatafromlocal
+                if (this.state.LoginUserId === null) {
+                  Swal.fire({
+                    icon: 'warning',
+                    title: '您目前還沒登入',
+                    text: '請立即登入以查看更多推文',
+                  }).then(r => {
+                    window.location.reload()
+                  })
+                } else {
+                  window.location.href = `/postdetail/${brewery.post_id}`
+                }
+              }}
             >
               <figure className="C-InfiniteLoadFigure" style={{}}>
                 <img

@@ -369,7 +369,11 @@ function MindexProfile() {
           </button>
           {/* 外連個人貼文按鈕 */}
           <div className="M-comLink">
-            <AiOutlineRead />
+            <AiOutlineRead
+              onClick={() => {
+                window.location.href = `/Communityprofile/${localUserData.mbId}`
+              }}
+            />
           </div>
           {/* 回主頁層按鈕 */}
           <div

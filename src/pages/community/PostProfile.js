@@ -20,8 +20,11 @@ function PostProfile(props) {
   const [posts, setPosts] = useState([])
   const [members, setMembers] = useState([])
   const [friendList, setFriendList] = useState([])
+  const [loginUserFriend, setLoginUserFriend] = useState([])
 
   const [addingFriend, setAddingFriend] = useState(false)
+  const [addedFriend, setAddedFriend] = useState(false)
+
   // const [postMember, setPostMember] = useState([])
   const [loginUserId, setLoginUserId] = useState('')
 
@@ -41,12 +44,15 @@ function PostProfile(props) {
     fetchPost()
     fetchPostmember()
   }, [])
+
   useEffect(() => {
     const getDatafromlocal = JSON.parse(localStorage.getItem('LoginUserData'))
     const input = { mbId: getDatafromlocal.mbId }
+
     // const jsonInput = JSON.stringify(input)
 
     setLoginUserId(input.mbId)
+
     // console.log(input.mbId)
   }, [])
 
@@ -110,7 +116,53 @@ function PostProfile(props) {
   useEffect(() => {
     checkaddfriend()
   })
-  // console.log('1', addingFriend)
+
+  async function beFriend() {
+    const request = new Request(
+      'http://localhost:6001/tandem/member/findfriend',
+      {
+        method: 'POST',
+        body: JSON.stringify(memberId),
+        headers: new Headers({
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }),
+      }
+    )
+    const response = await fetch(request)
+    const data = await response.json()
+
+    // console.log(JSON.stringify(arr))
+    // console.log('arr', typeof arr[0].mbFd)
+    setLoginUserFriend(data)
+  }
+  // console.log('1', loginUserFriend)
+
+  useEffect(() => {
+    beFriend(loginUserId)
+  }, [loginUserId])
+  // console.log(loginUserFriend)
+  const addedfriend = () => {
+    let addedFriendId = null
+    console.log(loginUserFriend)
+    if (loginUserFriend.length >= 1) {
+      for (let i = 0; i < loginUserFriend.length; i++) {
+        addedFriendId = loginUserFriend[i].mbId
+        console.log('add', addedFriendId)
+        if (addedFriendId == props.match.params.id) {
+          setAddedFriend(true)
+        }
+      }
+    }
+  }
+  useEffect(() => {
+    addedfriend(loginUserFriend)
+  }, [loginUserFriend])
+  // console.log('1', loginUserFriend)
+
+  // console.log(loginUserFriend.mbFd)
+
+  // let userFriend = loginUserFriend[0].mbFd
 
   // console.log(addingfriend)
   // ----------------------
@@ -260,6 +312,12 @@ function PostProfile(props) {
                       ''
                     )}
                     {/* 加好友卡片彈跳視窗 */}
+                    <button
+                      className={`addedfriend ${!addedFriend ? '' : 'active'}`}
+                      disabled
+                    >
+                      已成為好友
+                    </button>
                     <div className={`M-popupFriend ${pop ? 'active' : ''}`}>
                       <div
                         className={`position-relative ${
@@ -358,7 +416,8 @@ function PostProfile(props) {
                   color: '#F9A451',
                   position: 'fixed',
                   zIndex: '10',
-                  right: '40px',
+                  right: '10%',
+                  top: '50%',
                 }}
               >
                 <AiOutlinePlusCircle />
@@ -542,6 +601,12 @@ function PostProfile(props) {
                 ) : (
                   ''
                 )}
+                <button
+                  className={`addedfriend ${!addedFriend ? '' : 'active'}`}
+                  disabled
+                >
+                  已成為好友
+                </button>
                 {/* 加好友卡片彈跳視窗 */}
                 <div className={`M-popupFriend ${pop ? 'active' : ''}`}>
                   <div
