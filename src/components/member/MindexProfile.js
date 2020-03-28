@@ -348,15 +348,19 @@ function MindexProfile() {
           style={{ height: `${editlistopen ? '52rem' : ''}` }}
         >
           <section className="M-avatarTop">
-            <div className="M-avatarPhoto">
-              <img src={localUserData.mbAva} alt="" />
+            {/* fix */}
+            <div className="M-avatartop-up">
+              <div className="M-avatarPhoto">
+                <img src={localUserData.mbAva} alt="" />
+              </div>
+              <div className="M-avatarDes">
+                <h3 onClick={() => dispatch(displayChange(1))}>
+                  {localUserData.mbNick}
+                </h3>
+                <h6>{localUserData.mbDes}</h6>
+              </div>
             </div>
-            <div className="M-avatarDes">
-              <h3 onClick={() => dispatch(displayChange(1))}>
-                {localUserData.mbNick}
-              </h3>
-              <h6>{localUserData.mbDes}</h6>
-            </div>
+            <div className="M-avatartop-dwn"></div>
           </section>
           {/* 修改個人資料btn */}
           <button
@@ -484,46 +488,67 @@ function MindexProfile() {
                 />
               </div>
               {/* 之後要再修改樣式---------- */}
-              <input
-                type="submit"
+              <button
                 className="M-mbdesSub"
                 defaultValue="確認修改"
                 onClick={() => {
                   postupdatedinfo()
                 }}
-              />
+              >
+                確認修改
+              </button>
             </div>
           </section>
         </div>
         {/* 會員主頁左邊鈕 */}
         <div className="M-subbtnGroup">
-          <button
-            onClick={() => {
-              dispatch(displayChange(2))
-            }}
-          >
-            好友管理
-          </button>
-          <button
-            onClick={() => {
-              dispatch(displayChange(3))
-            }}
-          >
-            遊戲倉庫
-          </button>
-          <button
-            onClick={() => {
-              dispatch(displayChange(4))
-            }}
-          >
-            購買管理
-          </button>
+          {/* <div className="M-subiconwrapper">
+            <div className="M-subicon">
+              <AiOutlineRead />
+            </div>
+            <div className="M-subicon">
+              <AiOutlineGift />
+            </div>
+            <div className="M-subicon">
+              <MdReplay />
+            </div>
+          </div> */}
+          <div className="M-subbtnGroupbrick"></div>
+          <div className="M-subbtnwrapper">
+            <button
+              className="M-sublayerbtn"
+              onClick={() => {
+                dispatch(displayChange(2))
+              }}
+            >
+              好友管理
+            </button>
+            <button
+              className="M-sublayerbtn"
+              onClick={() => {
+                dispatch(displayChange(3))
+              }}
+            >
+              遊戲倉庫
+            </button>
+            <button
+              className="M-sublayerbtn"
+              onClick={() => {
+                dispatch(displayChange(4))
+              }}
+            >
+              購買管理
+            </button>
+          </div>
         </div>
 
         {/* 要從fetch時拿到物品的長度來決定CSS的距離 */}
         {/* 關注商品列表跑馬 */}
         <div className="M-LikeproductWrapper">
-          <h3>關注商品</h3>
+          <div className="M-Likeproducthead">
+            <h3>關注商品</h3>
+          </div>
+
           {/* 關注商品顯示窗 */}
           <div className="M-azenproductListWindow">
             {/* 關注商品輸送帶 */}
