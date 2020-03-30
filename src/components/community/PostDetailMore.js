@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 
 export default function PostDetailMore(props) {
   const [loginUserId, setLoginUserId] = useState('')
+  console.log('content:', props.postContent)
 
   useEffect(() => {
     const getDatafromlocal = JSON.parse(localStorage.getItem('LoginUserData'))
@@ -57,6 +58,7 @@ export default function PostDetailMore(props) {
 
   // edit post
   const editPost = () => {
+    console.log(props.postContent)
     Swal.fire({
       input: 'textarea',
       inputValue: props.postContent,
